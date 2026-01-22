@@ -1,0 +1,28 @@
+/**
+ * QuickFacts Styles
+ * Atlan Performance - "Liquid Precision" Design System
+ */
+
+.quickFacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid rgba(14, 138, 154, 0.2);
+  margin-top: var(--space-xs);
+}
+
+.fact {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-foam);
+  font-size: var(--size-small);
+  font-family: var(--font-body);
+}
+
+/* Icons can use Tide Teal (they're not text) */
+.fact svg {
+  color: var(--color-tide-teal);
+  flex-shrink: 0;
+}

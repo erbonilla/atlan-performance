@@ -1,0 +1,258 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "programs": "Programas",
+        "courses": "Cursos",
+        "community": "Comunidad",
+        "about": "Nosotros",
+        "contact": "Contacto",
+        "getStarted": "COMENZAR"
+    },
+    "hero": {
+        "title": "Coaching de Resistencia Diseñado con Ciencia, Nacido del Océano",
+        "subtitle": "",
+        "description": "Entrenamiento estructurado para nadadores y triatletas que buscan disciplina, maestría biomecánica y una comunidad construida para la longevidad.",
+        "cta": "EMPIEZA HOY!"
+    },
+    "programs": {
+        "title": "Nuestros Programas",
+        "subtitle": "Coaching especializado para cada etapa de tu viaje deportivo.",
+        "swimming_adults": {
+            "title": "Natación Adultos",
+            "desc": "Mejora tu técnica y condición física en un ambiente estructurado.",
+            "long_desc": "Nuestro programa para adultos se enfoca en la eficiencia biomecánica y el desarrollo de la resistencia. Ya seas principiante o experto, nuestros entrenadores ajustarán el plan a tu nivel."
+        },
+        "swimming_juniors": {
+            "title": "Natación Juniors",
+            "desc": "Desarrollo de habilidades acuáticas para jóvenes atletas.",
+            "long_desc": "Fomentamos el amor por el agua mientras enseñamos técnica correcta, disciplina y trabajo en equipo para la próxima generación de nadadores."
+        },
+        "open_water": {
+            "title": "Aguas Abiertas",
+            "desc": "Domina el océano con seguridad y confianza.",
+            "long_desc": "Entrenamientos específicos para el mar: navegación, entradas, salidas y manejo de corrientes para que nades con seguridad en cualquier condición."
+        },
+        "running": {
+            "title": "Running",
+            "desc": "Alcanza tus metas en asfalto o trillo.",
+            "long_desc": "Planes personalizados para corredores de 5k hasta ultramaratón, con énfasis en técnica de carrera y prevención de lesiones."
+        },
+        "triathlon": {
+            "title": "Triatlón",
+            "desc": "Integra natación, ciclismo y carrera en un solo rendimiento.",
+            "long_desc": "Preparación integral para triatletas de todas las distancias. Optimizamos tu entrenamiento para que rindas al máximo en las tres disciplinas."
+        },
+        "learn_more": "Leer Más",
+        "get_started": "COMENZAR",
+        "back": "Volver a Programas",
+        "features": "Características Clave"
+    },
+    "courses": {
+        "title": "Cursos y Horarios",
+        "subtitle": "Elige el plan que se ajuste a tus metas y entrena con nosotros.",
+        "select_plan": "Seleccionar Plan",
+        "monthly_fee": "TARIFA MENSUAL",
+        "most_popular": "MÁS POPULAR",
+        "schedule_title": "HORARIO DE CLASES",
+        "schedule_subtitle": "Planee llegar 15 minutos antes.",
+        "location_title": "INSTALACIONES PISCINA APAMAR",
+        "location_address": "Dirección:",
+        "location_address_full": "400 m Oeste del Parque, 21101 Zarcero, Costa Rica",
+        "location_from": "Desde el Parque de Zarcero",
+        "location_get_directions": "CÓMO LLEGAR",
+        "location_download": "DESCARGAR UBICACIÓN",
+        "location_open_maps": "Abrir en Google Maps",
+        "location_view_map": "Ver mapa",
+        "pool_temp": "Temperatura promedio de la piscina",
+        "important_info": "INFORMACIÓN IMPORTANTE DEL CURSO",
+        "important_applies": "Aplica a todos los horarios",
+        "info_age": "Para participantes de 8 años en adelante.",
+        "info_duration": "Duración promedio de clase: 60 minutos.",
+        "info_group": "Todas las sesiones son grupales, organizadas por nivel:",
+        "info_beginner": "Principiante",
+        "info_intermediate": "Intermedio",
+        "info_advanced": "Avanzado",
+        "info_rules": "Todos los participantes deben seguir las reglas y regulaciones de la piscina establecidas por la instalación.",
+        "days": {
+            "tuesday": "Martes",
+            "thursday": "Jueves",
+            "saturday": "Sábado"
+        },
+        "dolphin": {
+            "name": "DOLPHIN",
+            "price": "₡22,000",
+            "description": "Experimenta tus primeras sesiones con Atlan.",
+            "sessions": "1 sesión por semana",
+            "focus": "Enfoque en fundamentos (técnica + confianza)",
+            "progression": "Progresión guiada por el entrenador",
+            "button": "COMENZAR AHORA"
+        },
+        "shark": {
+            "name": "SHARK",
+            "price": "₡28,000",
+            "description": "Para atletas que buscan mejorar y unirse a eventos.",
+            "sessions": "2 sesiones por semana",
+            "levels": "Todos los niveles",
+            "training": "Entrenamiento enfocado en progreso (técnica + fitness)",
+            "button": "UNIRSE"
+        },
+        "orca": {
+            "name": "ORCA",
+            "price": "₡35,000",
+            "description": "Diseñado para participación en eventos y metas de competencia.",
+            "sessions": "3 sesiones por semana",
+            "levels": "Todos los niveles",
+            "preparation": "Preparación orientada al rendimiento",
+            "button": "IR PRO"
+        },
+        "contact_card": {
+            "title": "CONTÁCTANOS",
+            "subtitle": "¿Tienes preguntas o listo para comenzar?",
+            "description": "Completa nuestro formulario de contacto y nos pondremos en contacto contigo pronto para responder tus preguntas y ayudarte a comenzar tu viaje con Atlan.",
+            "button": "CONTÁCTANOS",
+            "support_hours": "Horario de atención",
+            "response_time": "Tiempo de respuesta: 24-48 horas"
+        }
+    },
+    "about": {
+        "title": "Entrenador Principal",
+        "eyebrow": "Entrenador Principal y Fundador",
+        "name": "Edgar Bonilla",
+        "bio": {
+            "paragraph1": "Mi viaje comenzó en el agua, pero el coaching se convirtió en mi obsesión por una pregunta:",
+            "paragraph1_cont": " algunos atletas mejoran mientras otros se estancan?",
+            "paragraph2": "En Atlan, no confiamos en \"fórmulas mágicas\". Confiamos en la",
+            "paragraph2_cont": ", biomecánica clara y hábitos que realmente puedes sostener.",
+            "paragraph3": "Mi objetivo es ayudarte a desbloquear tu potencial —como atleta y como persona— con un plan construido alrededor de tu vida real.",
+            "why": "por qué",
+            "smartConsistency": "consistencia inteligente"
+        },
+        "quote": "Entrena inteligente. Muévete con propósito. El progreso sigue.",
+        "credentials": {
+            "swimming_coach": "Entrenador Certificado Internacional de Natación",
+            "biomechanics": "Especialista en Biomecánica de Natación",
+            "ironman": "Entrenador Certificado Internacional Ironman — Triatlón",
+            "experience": "Años de Experiencia en Coaching",
+            "years": "25+"
+        },
+        "highlights": {
+            "philosophy": {
+                "title": "Filosofía — Precisión Líquida",
+                "oneliner": "Entrena inteligente, no más. Cada sesión tiene un propósito claro.",
+                "bullet1": "Señales técnicas basadas en biomecánica",
+                "bullet2": "Consistencia sostenible (sin agotamiento)"
+            },
+            "experience": {
+                "title": "Experiencia — Construido en el Agua",
+                "oneliner": "15+ años de coaching • 25+ años en el deporte.",
+                "bullet1": "Progresión, recuperación y hábitos que perduran",
+                "bullet2": "Planificación lista para competencias en natación + triatlón"
+            },
+            "mission": {
+                "title": "Misión — Desbloquea Tu Potencial",
+                "oneliner": "Desarrollo a largo plazo, construido alrededor de la vida real.",
+                "bullet1": "Longevidad, claridad y confianza",
+                "bullet2": "Un plan alineado con tu fisiología + objetivos"
+            }
+        }
+    },
+    "contact": {
+        "title": "Empieza Tu Viaje",
+        "subtitle": "¿Listo para entrenar con Liquid Precision? Llena el formulario abajo.",
+        "submit": "Enviar Solicitud",
+        "success_title": "¡Solicitud Recibida!",
+        "success_msg": "Te contactaremos pronto para confirmar tu sesión de prueba."
+    },
+    "form": {
+        "full_name": "Nombre Completo",
+        "phone": "Teléfono (WhatsApp)",
+        "plan": "Plan de Interés",
+        "message": "Mensaje (Opcional)",
+        "required": "Este campo es requerido",
+        "invalid_email": "Por favor ingresa un correo válido"
+    },
+    "usp": {
+        "science": {
+            "title": "Integridad Científica",
+            "desc": "Planes de entrenamiento basados en principios fisiológicos, no en conjeturas."
+        },
+        "discipline": {
+            "title": "Disciplina Estructurada",
+            "desc": "La constancia es clave. Proveemos el marco para tu éxito."
+        },
+        "resilience": {
+            "title": "Resiliencia Mental",
+            "desc": "Construyendo fortaleza en el agua para conquistar desafíos en tierra."
+        },
+        "community": {
+            "title": "Centrado en el Atleta",
+            "desc": "Una comunidad de apoyo donde el viaje de cada atleta importa."
+        }
+    },
+    "community": {
+        "title": "Únete a Nuestra Comunidad",
+        "subtitle": "Conecta con otros atletas, comparte tu viaje y sé parte de algo más grande.",
+        "features": {
+            "connect": {
+                "title": "Conecta con Atletas",
+                "desc": "Conoce nadadores, corredores y triatletas que comparten tu pasión por el deporte de resistencia."
+            },
+            "support": {
+                "title": "Apoyo y Motivación",
+                "desc": "Recibe aliento de entrenadores y compañeros. Celebramos cada logro juntos."
+            },
+            "share": {
+                "title": "Comparte tu Viaje",
+                "desc": "Publica tu progreso, haz preguntas e inspira a otros con tu dedicación."
+            }
+        },
+        "join": {
+            "title": "¿Listo para Unirte?",
+            "description": "Síguenos en Instagram o únete a nuestro grupo de WhatsApp para mantenerte conectado con la comunidad Atlan."
+        }
+    },
+    "newsletter": {
+        "title": "Únete a la Comunidad Atlan",
+        "desc": "Recibe consejos de natación y actualizaciones de programas directamente en tu correo.",
+        "placeholder": "Tu correo electrónico",
+        "button": "Suscribirse",
+        "success": "¡Gracias por suscribirte!",
+        "disclaimer": "Sin spam. Date de baja en cualquier momento."
+    },
+    "form": {
+        "required": "Este campo es requerido",
+        "invalid_email": "Por favor ingresa un correo válido"
+    },
+    "footer": {
+        "rights": "Todos los derechos reservados."
+    },
+    "testimonials": {
+        "title": "Historias de Atletas",
+        "subtitle": "Resultados reales de atletas que entrenan con Precisión Líquida.",
+        "amanda": {
+            "name": "Amanda B.",
+            "role": "Atleta Recreativa",
+            "content": "El Coach es un profesional comprometido, apasionado por lo que hace y muy conocedor. Lo recomiendo 100% a cualquiera que busque mejorar su rendimiento deportivo de manera seria y efectiva."
+        },
+        "joaquin": {
+            "name": "Joaquín R.",
+            "role": "Atleta Recreativo",
+            "content": "Aprendí a nadar después de jubilarme. Gracias a la guía, dedicación y compromiso. Hoy nado con calma, técnica y lo disfruto al máximo."
+        },
+        "steisy": {
+            "name": "Steisy C.",
+            "role": "Nadadora",
+            "content": "Mi experiencia ha sido más que gratificante, es un lugar para sentirse seguro y aliviado, la forma en que el Coach realiza su trabajo es muy profesional y transmite su amor por el deporte."
+        },
+        "agustin": {
+            "name": "Agustin F.",
+            "role": "Nadador - Triatleta",
+            "content": "He entrenado con él en 2 momentos. Primero como nadador adolescente y ahora como triatleta adulto, donde hemos logrado participación y podios, en distancia sprint, olímpica y 70.3."
+        },
+        "rodrigo": {
+            "name": "Rodrigo R.",
+            "role": "Triatleta",
+            "content": "Mi sueño era poder hacer un triatlón. Comencé mi proceso con el Coach y no solo logré hacer mi primer triatlón, sino que convertí el entrenamiento profesional en parte de mi estilo de vida, incluyendo 5 Ironman 70.3."
+        }
+    }
+}

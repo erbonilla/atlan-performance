@@ -1,0 +1,106 @@
+/* =========================================
+   ComponentName Styles
+   Atlan "Liquid Precision" Design System
+   ========================================= */
+
+/* Container */
+.container {
+  /* Add container styles */
+}
+
+/* =========================================
+   Page-specific Styles (if this is a page)
+   ========================================= */
+
+.page {
+  min-height: 100vh;
+  background-color: var(--color-abyss-navy);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  background: linear-gradient(
+    180deg,
+    var(--color-abyss-navy) 0%,
+    var(--color-abyss-light) 100%
+  );
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--size-h1);
+  font-weight: var(--weight-extra-bold);
+  color: var(--color-foam);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-light);
+  color: var(--color-foam);
+  line-height: var(--line-height-normal);
+  max-width: 600px;
+}
+
+/* Content Section */
+.content {
+  padding: var(--space-2xl) 0;
+}
+
+/* =========================================
+   Animations (Liquid Precision)
+   ========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateFadeIn {
+  animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* =========================================
+   Reduced Motion
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .animateFadeIn {
+    animation: none;
+  }
+}
+
+/* =========================================
+   Light Mode Overrides (if needed)
+   ========================================= */
+
+:global(body:not(.dark-mode)) .page {
+  background-color: var(--color-foam);
+}
+
+:global(body:not(.dark-mode)) .title,
+:global(body:not(.dark-mode)) .subtitle {
+  color: var(--color-abyss-navy);
+}

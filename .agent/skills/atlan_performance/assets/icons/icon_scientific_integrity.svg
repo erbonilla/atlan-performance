@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glassmorphism background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="rgba(14, 138, 154, 0.15)"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" stroke="rgba(14, 138, 154, 0.4)" stroke-width="1"/>
+  
+  <!-- Flask icon -->
+  <path d="M26 16V26L18 42C17.2 43.6 18.4 46 20.2 46H43.8C45.6 46 46.8 43.6 46 42L38 26V16" 
+        stroke="#0E8A9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M24 16H40" stroke="#0E8A9A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M22 36H42" stroke="#0E8A9A" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Bubbles -->
+  <circle cx="28" cy="40" r="2" fill="#FF6A3D"/>
+  <circle cx="36" cy="38" r="2" fill="#FF6A3D"/>
+  <circle cx="32" cy="42" r="1.5" fill="#FF6A3D"/>
+</svg>

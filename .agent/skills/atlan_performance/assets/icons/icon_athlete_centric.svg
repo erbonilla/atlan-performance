@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glassmorphism background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="rgba(14, 138, 154, 0.15)"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" stroke="rgba(14, 138, 154, 0.4)" stroke-width="1"/>
+  
+  <!-- Person silhouette -->
+  <circle cx="32" cy="20" r="6" stroke="#0E8A9A" stroke-width="2"/>
+  <path d="M20 50V42C20 37.5817 23.5817 34 28 34H36C40.4183 34 44 37.5817 44 42V50" 
+        stroke="#0E8A9A" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Heart -->
+  <path d="M32 30L30.2929 28.2929C28.9024 26.9024 28.9024 24.6976 30.2929 23.3071C31.6834 21.9166 33.8882 21.9166 35.2787 23.3071L32 26.5858L28.7213 23.3071C27.3308 21.9166 29.5356 21.9166 30.9261 23.3071" 
+        fill="#FF6A3D"/>
+  <path d="M32 42C32 42 24 38 24 33C24 30.2386 26.2386 28 29 28C30.4 28 31.6 28.6 32 29.5C32.4 28.6 33.6 28 35 28C37.7614 28 40 30.2386 40 33C40 38 32 42 32 42Z" 
+        fill="#FF6A3D" 
+        stroke="#FF6A3D" 
+        stroke-width="1"/>
+</svg>

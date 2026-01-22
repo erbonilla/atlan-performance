@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glassmorphism background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="rgba(14, 138, 154, 0.15)"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" stroke="rgba(14, 138, 154, 0.4)" stroke-width="1"/>
+  
+  <!-- Calendar/Grid icon -->
+  <rect x="14" y="18" width="36" height="32" rx="4" stroke="#0E8A9A" stroke-width="2"/>
+  <path d="M14 26H50" stroke="#0E8A9A" stroke-width="2"/>
+  <path d="M22 14V22" stroke="#0E8A9A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42 14V22" stroke="#0E8A9A" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Grid lines -->
+  <path d="M26 26V50" stroke="#0E8A9A" stroke-width="1" stroke-opacity="0.5"/>
+  <path d="M38 26V50" stroke="#0E8A9A" stroke-width="1" stroke-opacity="0.5"/>
+  <path d="M14 34H50" stroke="#0E8A9A" stroke-width="1" stroke-opacity="0.5"/>
+  <path d="M14 42H50" stroke="#0E8A9A" stroke-width="1" stroke-opacity="0.5"/>
+  
+  <!-- Check marks -->
+  <path d="M18 30L20 32L24 28" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 30L32 32L36 28" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

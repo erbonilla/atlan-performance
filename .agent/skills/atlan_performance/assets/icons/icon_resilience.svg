@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glassmorphism background -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="rgba(14, 138, 154, 0.15)"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" stroke="rgba(14, 138, 154, 0.4)" stroke-width="1"/>
+  
+  <!-- Mountain -->
+  <path d="M12 46L26 22L34 34L42 26L52 46H12Z" 
+        fill="rgba(14, 138, 154, 0.3)" 
+        stroke="#0E8A9A" 
+        stroke-width="2" 
+        stroke-linejoin="round"/>
+  
+  <!-- Sun/Peak highlight -->
+  <circle cx="42" cy="20" r="4" fill="#FF6A3D"/>
+  <path d="M42 12V14" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M42 26V28" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M34 20H36" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 20H50" stroke="#FF6A3D" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Wave lines at bottom -->
+  <path d="M8 50C12 48 16 52 20 50C24 48 28 52 32 50C36 48 40 52 44 50C48 48 52 52 56 50" 
+        stroke="#0E8A9A" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+</svg>

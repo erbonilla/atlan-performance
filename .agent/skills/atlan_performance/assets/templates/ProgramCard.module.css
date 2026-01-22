@@ -1,0 +1,112 @@
+/**
+ * ProgramCard Styles
+ * Atlan Performance - "Liquid Precision" Design System
+ * 
+ * CRITICAL ACCESSIBILITY RULES:
+ * - Tag text MUST use --color-foam (11.8:1 contrast)
+ * - NEVER use --color-tide-teal for tag text (fails WCAG AA)
+ * - Touch targets minimum 48px
+ */
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  transition: var(--transition-liquid);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Desktop: Image left, content right */
+@media (min-width: 768px) {
+  .card {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+/* Card Image */
+.cardImage {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Card Content */
+.cardContent {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Title */
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: var(--size-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-foam);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Tags Container */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+/* Individual Tag
+ * CRITICAL: Text color MUST be Foam, NOT Tide Teal
+ * Tide Teal (3.8:1) fails WCAG AA for text under 18px
+ */
+.tag {
+  padding: 4px 12px;
+  border: 1px solid var(--color-tide-teal);
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: var(--size-small); /* 14px minimum */
+  font-weight: 500;
+  color: var(--color-foam); /* MUST be Foam - 11.8:1 contrast */
+  background: transparent;
+  white-space: nowrap;
+}
+
+/* Description */
+.cardDescription {
+  color: var(--color-foam);
+  line-height: var(--line-height-normal);
+  margin: 0;
+}
+
+/* Actions Container */
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-md);
+}
+
+/* Desktop: Buttons side by side */
+@media (min-width: 768px) {
+  .cardActions {
+    flex-direction: row;
+  }
+}
+
+/* Touch Targets - Minimum 48px */
+.cardActions :global(.btn) {
+  min-height: 48px;
+}
+
+/* Mobile: Full width buttons for easier tapping */
+@media (max-width: 767px) {
+  .cardActions :global(.btn) {
+    width: 100%;
+  }
+}
+
+/* Focus states handled by global .btn styles */
