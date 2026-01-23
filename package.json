@@ -12,7 +12,10 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "clean:vite": "rm -rf node_modules/.vite",
+    "clean:all": "rm -rf node_modules/.vite dist",
+    "dev:clean": "npm run clean:vite && npm run dev"
   },
   "dependencies": {
     "@heroui/react": "^2.7.7",

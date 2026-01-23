@@ -79,8 +79,8 @@
             "saturday": "Sábado"
         },
         "dolphin": {
-            "name": "DOLPHIN",
-            "price": "₡22,000",
+            "name": "DELFÍN",
+            "price": "₡20,000",
             "description": "Experimenta tus primeras sesiones con Atlan.",
             "sessions": "1 sesión por semana",
             "focus": "Enfoque en fundamentos (técnica + confianza)",
@@ -88,8 +88,8 @@
             "button": "COMENZAR AHORA"
         },
         "shark": {
-            "name": "SHARK",
-            "price": "₡28,000",
+            "name": "TIBURÓN",
+            "price": "₡25,000",
             "description": "Para atletas que buscan mejorar y unirse a eventos.",
             "sessions": "2 sesiones por semana",
             "levels": "Todos los niveles",
@@ -98,7 +98,7 @@
         },
         "orca": {
             "name": "ORCA",
-            "price": "₡35,000",
+            "price": "₡30,000",
             "description": "Diseñado para participación en eventos y metas de competencia.",
             "sessions": "3 sesiones por semana",
             "levels": "Todos los niveles",
@@ -172,6 +172,8 @@
         "invalid_email": "Por favor ingresa un correo válido"
     },
     "usp": {
+        "title": "Precisión Líquida",
+        "description": "Nuestra metodología combina ciencia basada en datos con la naturaleza fluida de los deportes acuáticos.",
         "science": {
             "title": "Integridad Científica",
             "desc": "Planes de entrenamiento basados en principios fisiológicos, no en conjeturas."
@@ -227,7 +229,7 @@
         "rights": "Todos los derechos reservados."
     },
     "testimonials": {
-        "title": "Historias de Atletas",
+        "title": "Testimonios de Atletas",
         "subtitle": "Resultados reales de atletas que entrenan con Precisión Líquida.",
         "amanda": {
             "name": "Amanda B.",

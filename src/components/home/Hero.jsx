@@ -117,9 +117,13 @@ const Hero = () => {
                     className="w-full h-full object-cover object-center scale-105 animate-slow-zoom"
                 />
                 {/* Overlays mejorados */}
-                <div className="absolute inset-0 bg-abyss-navy/60 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-abyss-navy via-abyss-navy/80 to-abyss-navy/30"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-abyss-navy/90"></div>
+                <div className="absolute inset-0 bg-abyss-navy/60 mix-blend-multiply dark:bg-abyss-navy/60 light:bg-white/40"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-abyss-navy via-abyss-navy/80 to-abyss-navy/30
+                              dark:from-abyss-navy dark:via-abyss-navy/80 dark:to-abyss-navy/30
+                              light:from-light-bg-primary light:via-light-bg-primary/60 light:to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-abyss-navy/90
+                              dark:from-transparent dark:via-transparent dark:to-abyss-navy/90
+                              light:from-transparent light:via-transparent light:to-light-bg-primary/95"></div>
             </div>
 
             {/* Canvas para animaciones de agua */}
@@ -130,22 +134,22 @@ const Hero = () => {
 
             {/* Efecto de brillo flotante */}
             <div className="absolute inset-0 z-[2] pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-tide-teal/20 rounded-full blur-[120px] animate-float"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-coral-spark/10 rounded-full blur-[120px] animate-float-delayed"></div>
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-tide-teal/20 dark:bg-tide-teal/20 light:bg-teal-light-optimized/10 rounded-full blur-[120px] animate-float"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-coral-spark/10 dark:bg-coral-spark/10 light:bg-coral-light-optimized/8 rounded-full blur-[120px] animate-float-delayed"></div>
             </div>
 
             {/* Content */}
             <div className="container-atlan relative z-10 text-left animate-fade-in px-4">
-                <h1 className="text-white font-heading font-extrabold mb-6 tracking-tight drop-shadow-2xl max-w-4xl">
+                <h1 className="text-white dark:text-white light:text-light-text-primary font-heading font-extrabold mb-6 tracking-tight drop-shadow-2xl max-w-4xl">
                     <span className="block text-4xl md:text-6xl lg:text-7xl mb-2 animate-slide-down uppercase leading-tight">
                         {t('hero.title')}
                     </span>
-                    <span className="block text-2xl md:text-3xl lg:text-4xl text-tide-teal font-normal animate-slide-up-delayed">
+                    <span className="block text-2xl md:text-3xl lg:text-4xl text-tide-teal dark:text-tide-teal light:text-teal-light-optimized font-normal animate-slide-up-delayed">
                         {t('hero.subtitle')}
                     </span>
                 </h1>
 
-                <p className="text-foam/90 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed font-light drop-shadow-lg animate-fade-in-delayed">
+                <p className="text-foam/90 dark:text-foam/90 light:text-light-text-secondary text-lg md:text-xl max-w-3xl mb-10 leading-relaxed font-light drop-shadow-lg animate-fade-in-delayed">
                     {t('hero.description')}
                 </p>
 
@@ -166,9 +170,9 @@ const Hero = () => {
             {/* Scroll indicator mejorado */}
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="flex flex-col items-center gap-2 animate-bounce-slow">
-                    <span className="text-foam/60 text-xs uppercase tracking-wider">Scroll</span>
-                    <div className="w-6 h-10 rounded-full border-2 border-foam/30 relative flex justify-center pt-2">
-                        <div className="w-1.5 h-3 bg-coral-spark rounded-full animate-scroll-indicator"></div>
+                    <span className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-xs uppercase tracking-wider">Scroll</span>
+                    <div className="w-6 h-10 rounded-full border-2 border-foam/30 dark:border-foam/30 light:border-light-border relative flex justify-center pt-2">
+                        <div className="w-1.5 h-3 bg-coral-spark dark:bg-coral-spark light:bg-coral-light-optimized rounded-full animate-scroll-indicator"></div>
                     </div>
                 </div>
             </div>

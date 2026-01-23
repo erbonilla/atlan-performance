@@ -109,10 +109,10 @@ const Programs = () => {
                 animate="visible"
                 variants={headerVariants}
             >
-                <h1 className="text-4xl md:text-5xl text-white font-heading font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-6">
                     {t('programs.title', 'Our Programs')}
                 </h1>
-                <p className="text-foam/70 max-w-2xl mx-auto text-lg">
+                <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto text-lg">
                     {t('programs.subtitle', 'Specialized coaching for every stage of your athlete journey.')}
                 </p>
             </motion.div>
@@ -150,10 +150,10 @@ const Programs = () => {
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-2xl text-white font-bold mb-3 font-heading">
+                                <h3 className="text-2xl text-white dark:text-white light:text-light-text-primary font-bold mb-3 font-heading">
                                     {t(program.titleKey, program.id)}
                                 </h3>
-                                <p className="text-foam/70 mb-6 flex-grow">
+                                <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary mb-6 flex-grow">
                                     {t(program.descKey, "Program description placeholder...")}
                                 </p>
                                 <div className="flex flex-col gap-3">
@@ -176,36 +176,44 @@ const Programs = () => {
                         transition: { duration: 0.3 }
                     }}
                 >
-                    <Card className="h-full flex flex-col bg-gradient-to-br from-tide-teal/10 to-coral-spark/10 border-tide-teal/30 hover:border-tide-teal/50 transition-colors">
+                    <Card className="h-full flex flex-col bg-gradient-to-br from-tide-teal/10 to-coral-spark/10 border-tide-teal/30 hover:border-tide-teal/50 
+                                   dark:from-tide-teal/10 dark:to-coral-spark/10 dark:border-tide-teal/30 dark:hover:border-tide-teal/50
+                                   light:from-teal-light-optimized/5 light:to-coral-light-optimized/5 light:border-teal-light-optimized/30 light:hover:border-teal-light-optimized/50
+                                   transition-colors">
                         <div className="p-6 flex flex-col flex-grow">
                             {/* Icon and Title */}
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 rounded-full bg-tide-teal/20 flex items-center justify-center">
-                                    <ChatCircleDots size={24} className="text-tide-teal" weight="fill" />
+                                <div className="w-12 h-12 rounded-full bg-tide-teal/20 flex items-center justify-center
+                                              dark:bg-tide-teal/20
+                                              light:bg-teal-light-optimized/20">
+                                    <ChatCircleDots size={24} className="text-tide-teal dark:text-tide-teal light:text-teal-light-optimized" weight="fill" />
                                 </div>
-                                <h3 className="text-2xl text-white font-bold font-heading">
+                                <h3 className="text-2xl text-white dark:text-white light:text-light-text-primary font-bold font-heading">
                                     {t('courses.contact_card.title', 'Contact Us')}
                                 </h3>
                             </div>
 
                             {/* Subtitle */}
-                            <p className="text-foam/60 text-sm mb-4">
+                            <p className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-sm mb-4">
                                 {t('courses.contact_card.subtitle', 'Questions or ready to start?')}
                             </p>
 
                             {/* Description */}
-                            <p className="text-foam/80 text-sm leading-relaxed mb-6 flex-grow">
+                            <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm leading-relaxed mb-6 flex-grow">
                                 {t('courses.contact_card.description', 'Fill out our contact form and we\'ll get back to you soon to answer your questions and help you start your journey with Atlan.')}
                             </p>
 
                             {/* Response Time Info */}
-                            <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10 mb-6">
-                                <Clock size={20} className="text-tide-teal mt-0.5 shrink-0" />
+                            <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10 
+                                          dark:bg-white/5 dark:border-white/10
+                                          light:bg-light-bg-tertiary light:border-light-border
+                                          mb-6">
+                                <Clock size={20} className="text-tide-teal dark:text-tide-teal light:text-teal-light-optimized mt-0.5 shrink-0" />
                                 <div>
-                                    <p className="text-white font-semibold text-sm mb-1">
+                                    <p className="text-white dark:text-white light:text-light-text-primary font-semibold text-sm mb-1">
                                         {t('courses.contact_card.response_time', 'Response time: 24-48 hours')}
                                     </p>
-                                    <p className="text-foam/60 text-xs">
+                                    <p className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-xs">
                                         {t('courses.contact_card.support_hours', 'Support hours')}
                                     </p>
                                 </div>

@@ -12,7 +12,7 @@ const Logo = ({ className = '', animated = true }) => {
         <LogoComponent
             src="/assets/logo/atlan_logo_transparent.svg"
             alt="Atlan Performance"
-            className={`w-[60px] h-[64px] ${className}`}
+            className={`w-[50px] h-[53px] ${className}`}
             {...animationProps}
         />
     );

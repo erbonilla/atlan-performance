@@ -25,7 +25,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
         { name: t('nav.home'), path: '/' },
         { name: t('nav.programs'), path: '/programs' },
         { name: t('nav.courses'), path: '/courses' },
-        { name: t('nav.community'), path: '/community' },
+        // { name: t('nav.community'), path: '/community' },
         { name: t('nav.about'), path: '/about' },
         { name: t('nav.contact'), path: '/contact' },
     ];

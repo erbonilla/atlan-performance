@@ -80,7 +80,7 @@
         },
         "dolphin": {
             "name": "DOLPHIN",
-            "price": "₡22,000",
+            "price": "₡20,000",
             "description": "Experience your first sessions with Atlan.",
             "sessions": "1 session per week",
             "focus": "Focus on fundamentals (technique + confidence)",
@@ -89,7 +89,7 @@
         },
         "shark": {
             "name": "SHARK",
-            "price": "₡28,000",
+            "price": "₡25,000",
             "description": "For athletes aiming to improve and join events.",
             "sessions": "2 sessions per week",
             "levels": "All levels",
@@ -98,7 +98,7 @@
         },
         "orca": {
             "name": "ORCA",
-            "price": "₡35,000",
+            "price": "₡30,000",
             "description": "Built for event participation and competition goals.",
             "sessions": "3 sessions per week",
             "levels": "All levels",
@@ -164,6 +164,8 @@
         "success_msg": "We will contact you shortly to confirm your trial session."
     },
     "usp": {
+        "title": "Liquid Precision",
+        "description": "Our methodology combines data-driven science with the fluid nature of water sports.",
         "science": {
             "title": "Scientific Integrity",
             "desc": "Training plans based on physiological principles, not guesswork."
@@ -219,7 +221,7 @@
         "rights": "All rights reserved."
     },
     "testimonials": {
-        "title": "Athlete Stories",
+        "title": "Athlete Testimonials",
         "subtitle": "Real results from athletes who train with Liquid Precision.",
         "amanda": {
             "name": "Amanda B.",

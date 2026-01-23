@@ -1,0 +1,80 @@
+================================================================================
+VARIABLES DE ENTORNO PARA VERCEL - ATLAN PERFORMANCE
+================================================================================
+
+Copia y pega estas variables exactamente como están en Vercel Dashboard.
+
+IMPORTANTE: 
+- No cambies los nombres (son case-sensitive)
+- Copia el valor completo sin espacios extras
+- Marca las 3 casillas: Production, Preview, Development (excepto GA4)
+
+================================================================================
+
+VARIABLE 1: VITE_SUPABASE_URL
+--------------------------------------------------------------------------------
+Name: 
+VITE_SUPABASE_URL
+
+Value:
+https://erdhekfpqseqtlwkhnfp.supabase.co
+
+Environments: ✓ Production  ✓ Preview  ✓ Development
+
+================================================================================
+
+VARIABLE 2: VITE_SUPABASE_ANON_KEY
+--------------------------------------------------------------------------------
+Name:
+VITE_SUPABASE_ANON_KEY
+
+Value:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVyZGhla2ZwcXNlcXRsd2tobmZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc4NzU2NDcsImV4cCI6MjA4MzQ1MTY0N30.nGux5XqNdMF_ZKV0pCclw_acINGdug9zaGHMcjJd0nE
+
+Environments: ✓ Production  ✓ Preview  ✓ Development
+
+================================================================================
+
+VARIABLE 3: VITE_GA_MEASUREMENT_ID (OPCIONAL - Agregar después)
+--------------------------------------------------------------------------------
+Name:
+VITE_GA_MEASUREMENT_ID
+
+Value:
+(Déjalo vacío por ahora - agrega cuando tengas tu Google Analytics ID)
+Formato: G-XXXXXXXXXX
+
+Environments: ✓ Production  (solo Production)
+
+================================================================================
+
+INSTRUCCIONES:
+
+1. Ve a la pantalla de configuración del proyecto en Vercel
+2. Busca la sección "Environment Variables"
+3. Para cada variable:
+   - Copia el "Name" y pégalo en el campo Name
+   - Copia el "Value" completo y pégalo en el campo Value
+   - Marca las casillas de Environment según se indica arriba
+   - Click en "Add"
+4. Cuando hayas agregado las 2 variables de Supabase, haz click en "Deploy"
+
+================================================================================
+
+NOTAS IMPORTANTES:
+
+- Estas credenciales son las de tu proyecto Supabase actual
+- La ANON_KEY es segura para usar en el cliente (navegador)
+- NUNCA expongas la SERVICE_ROLE_KEY de Supabase
+- Si regeneras las keys en Supabase, deberás actualizarlas en Vercel
+- Después de cambiar variables, debes hacer Redeploy
+
+================================================================================
+
+URLs DE REFERENCIA:
+
+Supabase Dashboard: https://supabase.com/dashboard/project/erdhekfpqseqtlwkhnfp
+Vercel Dashboard: https://vercel.com/edgars-projects-4ea02f46
+GitHub Repo: https://github.com/erbonilla/atlan-performance
+
+================================================================================

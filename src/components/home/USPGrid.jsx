@@ -52,14 +52,14 @@ const USPGrid = () => {
     };
 
     return (
-        <section className="section bg-abyss-navy relative">
+        <section className="section bg-abyss-navy dark:bg-abyss-navy light:bg-white relative">
             <div className="container-atlan">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl text-white font-heading font-bold mb-4">
-                        Liquid Precision
+                    <h2 className="text-3xl md:text-4xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-4">
+                        {t('usp.title', 'Liquid Precision')}
                     </h2>
-                    <p className="text-foam/70 max-w-2xl mx-auto">
-                        Our methodology combines data-driven science with the fluid nature of water sports.
+                    <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto">
+                        {t('usp.description', 'Our methodology combines data-driven science with the fluid nature of water sports.')}
                     </p>
                 </div>
 
@@ -74,18 +74,21 @@ const USPGrid = () => {
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <motion.div 
-                                className="mb-6 p-4 bg-abyss-light rounded-full group-hover:bg-abyss-light/80 transition-colors shadow-glow-teal/20"
+                                className="mb-6 p-4 bg-abyss-light rounded-full group-hover:bg-abyss-light/80 
+                                         dark:bg-abyss-light dark:group-hover:bg-abyss-light/80
+                                         light:bg-light-bg-tertiary light:group-hover:bg-light-bg-secondary
+                                         transition-colors shadow-glow-teal/20 dark:shadow-glow-teal/20 light:shadow-md"
                                 variants={iconVariants}
                                 initial="initial"
                                 animate={hoveredIndex === index ? "hover" : "initial"}
                             >
                                 {pillar.icon}
                             </motion.div>
-                            <h3 className="text-xl text-white font-bold mb-3">
+                            <h3 className="text-xl text-white dark:text-white light:text-light-text-primary font-bold mb-3">
                                 {t(pillar.titleKey, pillar.titleKey)}
                                 {/* Fallback to key if trans missing temporarily */}
                             </h3>
-                            <p className="text-foam/70 text-sm leading-relaxed">
+                            <p className="text-foam/70 dark:text-foam/70 light:text-light-text-tertiary text-sm leading-relaxed">
                                 {t(pillar.descKey, "Description pending...")}
                             </p>
                         </Card>

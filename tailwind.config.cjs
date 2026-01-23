@@ -18,6 +18,22 @@ module.exports = {
                 'coral-spark': '#FF6A3D',
                 'coral-dark': '#E0552D',
                 'foam': '#ECF7F8',
+                
+                // Light Mode Optimized Colors (WCAG AA+)
+                'light-bg-primary': '#FAFAFA',
+                'light-bg-secondary': '#F3F4F6',
+                'light-bg-tertiary': '#E5E7EB',
+                'light-text-primary': '#111827',
+                'light-text-secondary': '#374151',
+                'light-text-tertiary': '#4B5563',
+                'light-text-muted': '#6B7280',
+                'light-border': '#D1D5DB',
+                'light-border-strong': '#9CA3AF',
+                
+                // Coral optimizado para modo claro (mayor contraste)
+                'coral-light-optimized': '#EA580C',
+                // Teal optimizado para modo claro
+                'teal-light-optimized': '#0F766E',
             },
             fontFamily: {
                 logo: ['Outfit', 'sans-serif'],
@@ -100,15 +116,15 @@ module.exports = {
                 },
                 light: {
                     colors: {
-                        background: '#ECF7F8',
-                        foreground: '#0B2A3C',
+                        background: '#FAFAFA',
+                        foreground: '#111827',
                         primary: {
-                            DEFAULT: '#FF6A3D',
-                            foreground: '#ECF7F8',
+                            DEFAULT: '#EA580C',
+                            foreground: '#FFFFFF',
                         },
                         secondary: {
-                            DEFAULT: '#0E8A9A',
-                            foreground: '#ECF7F8',
+                            DEFAULT: '#0F766E',
+                            foreground: '#FFFFFF',
                         },
                     },
                 },

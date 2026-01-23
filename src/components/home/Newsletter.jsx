@@ -8,40 +8,46 @@ const Newsletter = () => {
     const { t } = useLanguage();
 
     return (
-        <section className="section bg-abyss-navy relative overflow-hidden">
+        <section className="section bg-abyss-navy dark:bg-abyss-navy light:bg-light-bg-secondary relative overflow-hidden">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-abyss-navy via-abyss-light/30 to-abyss-navy pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-abyss-navy via-abyss-light/30 to-abyss-navy 
+                          dark:from-abyss-navy dark:via-abyss-light/30 dark:to-abyss-navy
+                          light:from-light-bg-primary light:via-light-bg-tertiary light:to-light-bg-primary
+                          pointer-events-none"></div>
 
             <div className="container-atlan relative z-10">
                 <div className="max-w-4xl mx-auto glass p-8 md:p-12 rounded-2xl flex flex-col">
                     {/* Icon and Title */}
                     <div className="flex items-center gap-4 mb-4">
-                        <div className="w-16 h-16 rounded-full bg-tide-teal/20 flex items-center justify-center shrink-0">
-                            <ChatCircleDots size={32} className="text-tide-teal" weight="fill" />
+                        <div className="w-16 h-16 rounded-full bg-tide-teal/20 dark:bg-tide-teal/20 light:bg-teal-light-optimized/20 flex items-center justify-center shrink-0">
+                            <ChatCircleDots size={32} className="text-tide-teal dark:text-tide-teal light:text-teal-light-optimized" weight="fill" />
                         </div>
-                        <h2 className="text-3xl md:text-4xl text-white font-bold font-heading">
+                        <h2 className="text-3xl md:text-4xl text-white dark:text-white light:text-light-text-primary font-bold font-heading">
                             {t('courses.contact_card.title', 'Contact Us')}
                         </h2>
                     </div>
 
                     {/* Subtitle */}
-                    <p className="text-foam/60 text-left mb-6">
+                    <p className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-left mb-6">
                         {t('courses.contact_card.subtitle', 'Questions or ready to start?')}
                     </p>
 
                     {/* Description */}
-                    <p className="text-foam/80 text-left leading-relaxed mb-8">
+                    <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-left leading-relaxed mb-8">
                         {t('courses.contact_card.description', 'Fill out our contact form and we\'ll get back to you soon to answer your questions and help you start your journey with Atlan.')}
                     </p>
 
                     {/* Response Time Info */}
-                    <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10 mb-8">
-                        <Clock size={20} className="text-tide-teal mt-0.5 shrink-0" />
+                    <div className="flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10 
+                                  dark:bg-white/5 dark:border-white/10
+                                  light:bg-light-bg-tertiary light:border-light-border
+                                  mb-8">
+                        <Clock size={20} className="text-tide-teal dark:text-tide-teal light:text-teal-light-optimized mt-0.5 shrink-0" />
                         <div>
-                            <p className="text-white font-semibold text-sm mb-1">
+                            <p className="text-white dark:text-white light:text-light-text-primary font-semibold text-sm mb-1">
                                 {t('courses.contact_card.response_time', 'Response time: 24-48 hours')}
                             </p>
-                            <p className="text-foam/60 text-xs">
+                            <p className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-xs">
                                 {t('courses.contact_card.support_hours', 'Support hours')}
                             </p>
                         </div>

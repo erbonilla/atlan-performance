@@ -55,16 +55,22 @@ export default defineConfig({
     port: 5173,
     open: true,
   },
-  // optimizeDeps: {
-  //   force: true,
-  //   include: [
-  //     'react',
-  //     'react-dom',
-  //     'react-router-dom',
-  //     '@heroui/react',
-  //     'framer-motion',
-  //     'i18next',
-  //     'react-i18next',
-  //   ],
-  // },
+  optimizeDeps: {
+    // Forzar reoptimización cuando sea necesario (descomentar si hay problemas)
+    // force: true,
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@heroui/react',
+      'framer-motion',
+      'i18next',
+      'react-i18next',
+      '@supabase/supabase-js',
+      'react-ga4',
+      'react-markdown',
+    ],
+    // Excluir dependencias problemáticas si es necesario
+    exclude: [],
+  },
 });

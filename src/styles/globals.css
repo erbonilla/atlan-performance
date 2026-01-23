@@ -8,7 +8,7 @@
 
 /* CSS Custom Properties (Design Tokens) */
 :root {
-  /* Colors */
+  /* Colors - Dark Mode */
   --color-abyss-navy: #0B2A3C;
   --color-abyss-light: #0F3A50;
   --color-tide-teal: #0E8A9A;
@@ -16,6 +16,19 @@
   --color-coral-spark: #FF6A3D;
   --color-coral-dark: #E0552D;
   --color-foam: #ECF7F8;
+  
+  /* Colors - Light Mode (WCAG AA+ Optimized) */
+  --color-light-bg-primary: #FAFAFA;
+  --color-light-bg-secondary: #F3F4F6;
+  --color-light-bg-tertiary: #E5E7EB;
+  --color-light-text-primary: #111827;
+  --color-light-text-secondary: #374151;
+  --color-light-text-tertiary: #4B5563;
+  --color-light-text-muted: #6B7280;
+  --color-light-border: #D1D5DB;
+  --color-light-border-strong: #9CA3AF;
+  --color-coral-light-optimized: #EA580C;
+  --color-teal-light-optimized: #0F766E;
 
   /* Typography */
   --font-logo: 'Outfit', sans-serif;
@@ -149,13 +162,27 @@ h3 { font-size: var(--size-h3); }
 
 /* Light mode glass variants */
 .light .glass {
-  background: rgba(236, 247, 248, 0.7);
-  border-color: rgba(11, 42, 60, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(209, 213, 219, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .light .glass-subtle {
-  background: rgba(236, 247, 248, 0.5);
-  border-color: rgba(11, 42, 60, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(209, 213, 219, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.light .glass-strong {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(209, 213, 219, 0.8);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.light .glass-accent {
+  background: rgba(15, 118, 110, 0.08);
+  border-color: rgba(15, 118, 110, 0.2);
+  box-shadow: 0 4px 16px rgba(15, 118, 110, 0.08);
 }
 
 /* ========================================
@@ -387,4 +414,65 @@ h3 { font-size: var(--size-h3); }
   .section {
     padding: var(--space-2xl) 0;
   }
+}
+
+/* ========================================
+   Light Mode Utility Classes (WCAG AA+ Optimized)
+   ======================================== */
+
+/* Text Colors - Light Mode */
+.light .text-primary-light {
+  color: var(--color-light-text-primary);
+}
+
+.light .text-secondary-light {
+  color: var(--color-light-text-secondary);
+}
+
+.light .text-tertiary-light {
+  color: var(--color-light-text-tertiary);
+}
+
+.light .text-muted-light {
+  color: var(--color-light-text-muted);
+}
+
+/* Background Colors - Light Mode */
+.light .bg-primary-light {
+  background-color: var(--color-light-bg-primary);
+}
+
+.light .bg-secondary-light {
+  background-color: var(--color-light-bg-secondary);
+}
+
+.light .bg-tertiary-light {
+  background-color: var(--color-light-bg-tertiary);
+}
+
+/* Border Colors - Light Mode */
+.light .border-light {
+  border-color: var(--color-light-border);
+}
+
+.light .border-light-strong {
+  border-color: var(--color-light-border-strong);
+}
+
+/* High Contrast Text Utilities */
+.light .text-contrast-safe {
+  color: var(--color-light-text-secondary);
+}
+
+.light .text-contrast-optimal {
+  color: var(--color-light-text-primary);
+}
+
+/* Card Shadows - Light Mode */
+.light .shadow-card-light {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.light .shadow-card-light-hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 }

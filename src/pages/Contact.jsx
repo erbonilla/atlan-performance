@@ -52,10 +52,10 @@ const Contact = () => {
     return (
         <div className="container-atlan py-12 md:py-20 animate-fade-in">
             <div className="text-center mb-16">
-                <h1 className="text-4xl md:text-5xl text-white font-heading font-bold mb-6">
+                <h1 className="text-4xl md:text-5xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-6">
                     {t('contact.title', 'Start Your Journey')}
                 </h1>
-                <p className="text-foam/70 max-w-2xl mx-auto text-lg">
+                <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto text-lg">
                     {t('contact.subtitle', 'Ready to train with Liquid Precision? Fill out the form below.')}
                 </p>
             </div>
@@ -64,45 +64,56 @@ const Contact = () => {
                 {/* Contact Info */}
                 <div className="lg:col-span-1 space-y-6">
                     <Card className="p-6 flex items-start gap-4">
-                        <div className="bg-foam/10 p-3 rounded-full text-foam">
+                        <div className="bg-foam/10 p-3 rounded-full text-foam
+                                      dark:bg-foam/10 dark:text-foam
+                                      light:bg-teal-light-optimized/10 light:text-teal-light-optimized">
                             <Envelope size={24} weight="duotone" />
                         </div>
                         <div>
-                            <h3 className="text-white font-bold mb-1">Email</h3>
-                            <p className="text-foam/70 text-sm">info@atlanperformance.com</p>
+                            <h3 className="text-white dark:text-white light:text-light-text-primary font-bold mb-1">Email</h3>
+                            <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary text-sm">info@atlanperformance.com</p>
                         </div>
                     </Card>
 
                     <Card className="p-6 flex items-start gap-4">
-                        <div className="bg-foam/10 p-3 rounded-full text-foam">
+                        <div className="bg-foam/10 p-3 rounded-full text-foam
+                                      dark:bg-foam/10 dark:text-foam
+                                      light:bg-teal-light-optimized/10 light:text-teal-light-optimized">
                             <WhatsappLogo size={24} weight="duotone" />
                         </div>
                         <div>
-                            <h3 className="text-white font-bold mb-1">WhatsApp</h3>
-                            <p className="text-foam/70 text-sm">+(506) 8373-1111</p>
+                            <h3 className="text-white dark:text-white light:text-light-text-primary font-bold mb-1">WhatsApp</h3>
+                            <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary text-sm">+(506) 8373-1111</p>
                         </div>
                     </Card>
 
                     <Card className="p-6 flex items-start gap-4">
-                        <div className="bg-foam/10 p-3 rounded-full text-foam">
+                        <div className="bg-foam/10 p-3 rounded-full text-foam
+                                      dark:bg-foam/10 dark:text-foam
+                                      light:bg-teal-light-optimized/10 light:text-teal-light-optimized">
                             <MapPin size={24} weight="duotone" />
                         </div>
                         <div>
-                            <h3 className="text-white font-bold mb-1">Location</h3>
-                            <p className="text-foam/70 text-sm">Piscina, Instalaciones APAMAR, Zarcero, CR</p>
+                            <h3 className="text-white dark:text-white light:text-light-text-primary font-bold mb-1">Location</h3>
+                            <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary text-sm">Piscina, Instalaciones APAMAR, Zarcero, CR</p>
                         </div>
                     </Card>
                 </div>
 
                 {/* Form */}
-                <Card className="lg:col-span-2 p-8 md:p-10 border-tide-teal/30">
+                <Card className="lg:col-span-2 p-8 md:p-10 border-tide-teal/30 dark:border-tide-teal/30 light:border-teal-light-optimized/30">
                     {isSuccess ? (
                         <div className="text-center py-20">
-                            <div className="w-20 h-20 bg-tide-teal/20 rounded-full flex items-center justify-center mx-auto mb-6 text-tide-teal animate-bounce">
+                            <div className="w-20 h-20 bg-tide-teal/20 rounded-full flex items-center justify-center mx-auto mb-6 text-tide-teal 
+                                          dark:bg-tide-teal/20 dark:text-tide-teal
+                                          light:bg-teal-light-optimized/20 light:text-teal-light-optimized
+                                          animate-bounce">
                                 <WhatsappLogo size={40} weight="fill" />
                             </div>
-                            <h2 className="text-3xl text-white font-bold mb-4">{t('contact.success_title', 'Request Received!')}</h2>
-                            <p className="text-foam/80 max-w-md mx-auto">
+                            <h2 className="text-3xl text-white dark:text-white light:text-light-text-primary font-bold mb-4">
+                                {t('contact.success_title', 'Request Received!')}
+                            </h2>
+                            <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary max-w-md mx-auto">
                                 {t('contact.success_msg', 'We will contact you shortly to confirm your trial session.')}
                             </p>
                         </div>
