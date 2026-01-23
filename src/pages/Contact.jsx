@@ -32,8 +32,56 @@ const Contact = () => {
         validate
     );
 
+    const planOptions = [
+        { value: 'dolphin', label: 'Dolphin Plan' },
+        { value: 'shark', label: 'Shark Plan' },
+        { value: 'orca', label: 'Orca Plan' },
+    ];
+
     const onSubmit = async (data) => {
         try {
+            // 1. Configuration
+            const whatsappNumber = "50683731111";
+
+            // 2. Localization / Labels
+            const requestTitle = t('contact.request_title', 'New Contact Request');
+            const defaultMsg = t('contact.default_message', 'Hello, I am interested in your services.');
+            const contactDataLabel = t('contact.my_contact_data', 'Contact Details');
+
+            const nameLabel = t('form.full_name', 'Full Name');
+            const emailLabel = t('form.email', 'Email');
+            const phoneLabel = t('form.phone', 'Phone');
+            const planLabel = t('form.plan', 'Interested Plan');
+            const messageLabel = t('form.message', 'Message');
+
+            // 3. Find Plan Label
+            const selectedPlanOption = planOptions.find(p => p.value === data.selectedPlan);
+            const planDisplay = selectedPlanOption ? selectedPlanOption.label : data.selectedPlan;
+
+            // 4. Construct Message
+            let whatsappMessage = `*${requestTitle}*%0A%0A`;
+            whatsappMessage += `${defaultMsg}%0A%0A`;
+            whatsappMessage += `*${contactDataLabel}:*%0A`;
+
+            whatsappMessage += `*${nameLabel}:* ${encodeURIComponent(data.fullName)}%0A`;
+
+            if (data.email) {
+                whatsappMessage += `*${emailLabel}:* ${encodeURIComponent(data.email)}%0A`;
+            }
+
+            if (data.phone) {
+                whatsappMessage += `*${phoneLabel}:* ${encodeURIComponent(data.phone)}%0A`;
+            }
+
+            if (planDisplay) {
+                whatsappMessage += `*${planLabel}:* ${encodeURIComponent(planDisplay)}%0A`;
+            }
+
+            if (data.message) {
+                whatsappMessage += `%0A*${messageLabel}:*%0A${encodeURIComponent(data.message)}`;
+            }
+
+            // 5. Supabase Backup
             const { error } = await supabase.from('contact_messages').insert([{
                 full_name: data.fullName,
                 email: data.email,
@@ -43,6 +91,11 @@ const Contact = () => {
             }]);
 
             if (error) throw error;
+
+            // 6. Execute Redirect
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            window.open(whatsappUrl, '_blank');
+
         } catch (error) {
             console.error('Contact error:', error);
             throw error;
@@ -156,11 +209,7 @@ const Contact = () => {
                                 error={errors.selectedPlan}
                                 disabled={isSubmitting}
                                 className="md:col-span-2"
-                                options={[
-                                    { value: 'dolphin', label: 'Dolphin Plan' },
-                                    { value: 'shark', label: 'Shark Plan' },
-                                    { value: 'orca', label: 'Orca Plan' },
-                                ]}
+                                options={planOptions}
                             />
 
                             <Textarea

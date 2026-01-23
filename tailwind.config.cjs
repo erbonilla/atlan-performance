@@ -98,6 +98,10 @@ module.exports = {
     },
     darkMode: 'class',
     plugins: [
+        // Plugin para habilitar la variante light:
+        function({ addVariant }) {
+            addVariant('light', '.light &')
+        },
         heroui({
             themes: {
                 dark: {

@@ -85,7 +85,7 @@ const Courses = () => {
                 transition={{ duration: 0.6 }}
             >
                 <motion.h1 
-                    className="text-4xl md:text-5xl text-white font-heading font-bold mb-6"
+                    className="text-4xl md:text-5xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-6"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
@@ -93,7 +93,7 @@ const Courses = () => {
                     {t('courses.title', 'Courses & Schedules')}
                 </motion.h1>
                 <motion.p 
-                    className="text-foam/70 max-w-2xl mx-auto text-lg"
+                    className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto text-lg"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
@@ -131,12 +131,12 @@ const Courses = () => {
                 >
                     <Card className="h-full p-6 md:p-8">
                         <div className="flex items-center gap-3 mb-2">
-                            <CalendarBlank size={28} className="text-coral-spark" weight="regular" />
-                            <h2 className="text-xl text-white font-heading font-bold tracking-wide">
+                            <CalendarBlank size={28} className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized" weight="regular" />
+                            <h2 className="text-xl text-white dark:text-white light:text-light-text-primary font-heading font-bold tracking-wide">
                                 {t('courses.schedule_title')}
                             </h2>
                         </div>
-                        <p className="text-foam/60 text-sm mb-6">
+                        <p className="text-foam/60 dark:text-foam/60 light:text-light-text-tertiary text-sm mb-6">
                             {t('courses.schedule_subtitle')}
                         </p>
 
@@ -144,17 +144,17 @@ const Courses = () => {
                             {schedules.map((slot, index) => (
                                 <motion.div 
                                     key={index} 
-                                    className="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all border border-white/10"
+                                    className="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 dark:bg-white/5 dark:hover:bg-white/10 light:bg-light-bg-tertiary light:hover:bg-light-bg-secondary transition-all border border-white/10 dark:border-white/10 light:border-light-border"
                                     initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 1.1 + (index * 0.05), duration: 0.4 }}
                                     whileHover={{ x: 4 }}
                                 >
                                     <div className="flex items-center gap-3">
-                                        <Clock size={20} className="text-white" />
-                                        <span className="font-bold text-white">{slot.day}</span>
+                                        <Clock size={20} className="text-white dark:text-white light:text-light-text-primary" />
+                                        <span className="font-bold text-white dark:text-white light:text-light-text-primary">{slot.day}</span>
                                     </div>
-                                    <span className="text-white font-bold">{slot.time}</span>
+                                    <span className="text-white dark:text-white light:text-light-text-primary font-bold">{slot.time}</span>
                                 </motion.div>
                             ))}
                         </div>
@@ -169,26 +169,26 @@ const Courses = () => {
                 >
                     <Card className="h-full p-6 md:p-8">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden">
+                            <div className="w-10 h-10 rounded-lg bg-white dark:bg-white light:bg-light-bg-tertiary flex items-center justify-center overflow-hidden">
                                 <img 
                                     src="/assets/logo/apamar_logo.jpg" 
                                     alt="Apamar" 
                                     className="w-full h-full object-contain"
                                 />
                             </div>
-                            <h2 className="text-xl text-white font-heading font-bold tracking-wide">
+                            <h2 className="text-xl text-white dark:text-white light:text-light-text-primary font-heading font-bold tracking-wide">
                                 {t('courses.location_title')}
                             </h2>
                         </div>
 
                         <div className="mb-4">
                             <div className="flex items-start gap-2 mb-2">
-                                <MapPin size={18} className="text-white mt-1 shrink-0" />
+                                <MapPin size={18} className="text-white dark:text-white light:text-light-text-primary mt-1 shrink-0" />
                                 <div>
-                                    <p className="text-white font-semibold text-sm">
+                                    <p className="text-white dark:text-white light:text-light-text-primary font-semibold text-sm">
                                         {t('courses.location_address')}
                                     </p>
-                                    <p className="text-foam/80 text-sm">
+                                    <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm">
                                         {t('courses.location_address_full')}
                                     </p>
                                 </div>
@@ -196,25 +196,25 @@ const Courses = () => {
                         </div>
 
                         <div className="mb-4">
-                            <p className="text-foam/60 text-xs mb-3">{t('courses.location_from')}</p>
+                            <p className="text-foam/60 dark:text-foam/60 light:text-light-text-muted text-xs mb-3">{t('courses.location_from')}</p>
                             <div className="flex gap-2 text-xs flex-wrap">
-                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 rounded-lg border border-white/10 text-white">
+                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 dark:bg-white/5 light:bg-light-bg-tertiary rounded-lg border border-white/10 dark:border-white/10 light:border-light-border text-white dark:text-white light:text-light-text-primary">
                                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
                                     </svg>
-                                    <span className="text-white">2 min</span>
+                                    <span className="text-white dark:text-white light:text-light-text-primary">2 min</span>
                                 </div>
-                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 rounded-lg border border-white/10 text-white">
+                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 dark:bg-white/5 light:bg-light-bg-tertiary rounded-lg border border-white/10 dark:border-white/10 light:border-light-border text-white dark:text-white light:text-light-text-primary">
                                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1 16H9v-2h2v2zm0-4H9V7h2v7z"/>
                                     </svg>
-                                    <span className="text-white">12 min</span>
+                                    <span className="text-white dark:text-white light:text-light-text-primary">12 min</span>
                                 </div>
-                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 rounded-lg border border-white/10 text-white">
+                                <div className="flex items-center gap-1 px-3 py-2 bg-white/5 dark:bg-white/5 light:bg-light-bg-tertiary rounded-lg border border-white/10 dark:border-white/10 light:border-light-border text-white dark:text-white light:text-light-text-primary">
                                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/>
                                     </svg>
-                                    <span className="text-white">12 min</span>
+                                    <span className="text-white dark:text-white light:text-light-text-primary">12 min</span>
                                 </div>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ const Courses = () => {
                             href="https://www.google.com/maps/place/400+m+West+of+the+Park,+21101+Zarcero,+Costa+Rica"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block mt-3 text-white hover:text-foam/80 text-sm font-semibold transition-colors"
+                            className="block mt-3 text-white dark:text-white light:text-teal-light-optimized hover:text-foam/80 dark:hover:text-foam/80 light:hover:text-teal-dark text-sm font-semibold transition-colors"
                         >
                             {t('courses.location_open_maps')}
                         </a>
@@ -269,12 +269,12 @@ const Courses = () => {
                 >
                     <Card className="p-6 md:p-8 h-full">
                     <div className="flex items-center gap-3 mb-4">
-                        <Info size={28} className="text-coral-spark" weight="fill" />
-                        <h2 className="text-xl text-white font-heading font-bold tracking-wide">
+                        <Info size={28} className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized" weight="fill" />
+                        <h2 className="text-xl text-white dark:text-white light:text-light-text-primary font-heading font-bold tracking-wide">
                             {t('courses.important_info')}
                         </h2>
                     </div>
-                    <p className="text-foam/60 text-sm mb-6">
+                    <p className="text-foam/60 dark:text-foam/60 light:text-light-text-tertiary text-sm mb-6">
                         {t('courses.important_applies')}
                     </p>
 
@@ -286,8 +286,8 @@ const Courses = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.3, duration: 0.4 }}
                         >
-                            <User size={20} className="text-white mt-0.5 shrink-0" />
-                            <p className="text-foam/80 text-sm">{t('courses.info_age')}</p>
+                            <User size={20} className="text-white dark:text-white light:text-light-text-primary mt-0.5 shrink-0" />
+                            <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm">{t('courses.info_age')}</p>
                         </motion.div>
 
                         {/* Duration */}
@@ -297,8 +297,8 @@ const Courses = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.35, duration: 0.4 }}
                         >
-                            <Clock size={20} className="text-white mt-0.5 shrink-0" />
-                            <p className="text-foam/80 text-sm">{t('courses.info_duration')}</p>
+                            <Clock size={20} className="text-white dark:text-white light:text-light-text-primary mt-0.5 shrink-0" />
+                            <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm">{t('courses.info_duration')}</p>
                         </motion.div>
 
                         {/* Group Sessions */}
@@ -308,20 +308,20 @@ const Courses = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.4, duration: 0.4 }}
                         >
-                            <Users size={20} className="text-white mt-0.5 shrink-0" />
+                            <Users size={20} className="text-white dark:text-white light:text-light-text-primary mt-0.5 shrink-0" />
                             <div>
-                                <p className="text-foam/80 text-sm mb-2">{t('courses.info_group')}</p>
+                                <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm mb-2">{t('courses.info_group')}</p>
                                 <ul className="ml-6 space-y-1">
-                                    <li className="text-foam/70 text-sm flex items-center gap-2">
-                                        <CaretRight size={14} className="text-white" />
+                                    <li className="text-foam/70 dark:text-foam/70 light:text-light-text-tertiary text-sm flex items-center gap-2">
+                                        <CaretRight size={14} className="text-white dark:text-white light:text-light-text-primary" />
                                         {t('courses.info_beginner')}
                                     </li>
-                                    <li className="text-foam/70 text-sm flex items-center gap-2">
-                                        <CaretRight size={14} className="text-white" />
+                                    <li className="text-foam/70 dark:text-foam/70 light:text-light-text-tertiary text-sm flex items-center gap-2">
+                                        <CaretRight size={14} className="text-white dark:text-white light:text-light-text-primary" />
                                         {t('courses.info_intermediate')}
                                     </li>
-                                    <li className="text-foam/70 text-sm flex items-center gap-2">
-                                        <CaretRight size={14} className="text-white" />
+                                    <li className="text-foam/70 dark:text-foam/70 light:text-light-text-tertiary text-sm flex items-center gap-2">
+                                        <CaretRight size={14} className="text-white dark:text-white light:text-light-text-primary" />
                                         {t('courses.info_advanced')}
                                     </li>
                                 </ul>
@@ -335,22 +335,22 @@ const Courses = () => {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 1.45, duration: 0.4 }}
                         >
-                            <Info size={20} className="text-white mt-0.5 shrink-0" />
-                            <p className="text-foam/80 text-sm">{t('courses.info_rules')}</p>
+                            <Info size={20} className="text-white dark:text-white light:text-light-text-primary mt-0.5 shrink-0" />
+                            <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm">{t('courses.info_rules')}</p>
                         </motion.div>
 
                         {/* Pool Temperature */}
                         <motion.div 
-                            className="flex items-center justify-between p-4 bg-white/5 rounded-lg border border-white/10 mt-6"
+                            className="flex items-center justify-between p-4 bg-white/5 dark:bg-white/5 light:bg-light-bg-tertiary rounded-lg border border-white/10 dark:border-white/10 light:border-light-border mt-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.5, duration: 0.4 }}
                         >
                             <div className="flex items-center gap-3">
-                                <Thermometer size={24} className="text-white" />
-                                <span className="text-foam/80 text-sm">{t('courses.pool_temp')}</span>
+                                <Thermometer size={24} className="text-white dark:text-white light:text-light-text-primary" />
+                                <span className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-sm">{t('courses.pool_temp')}</span>
                             </div>
-                            <span className="text-white text-2xl font-bold">28°C</span>
+                            <span className="text-white dark:text-white light:text-light-text-primary text-2xl font-bold">28°C</span>
                         </motion.div>
                     </div>
                 </Card>

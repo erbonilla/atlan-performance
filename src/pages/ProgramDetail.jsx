@@ -145,36 +145,36 @@ const ProgramDetail = () => {
 
     return (
         <div className="container-atlan py-12 md:py-20 animate-fade-in">
-            <NavLink to="/programs" className="inline-flex items-center gap-2 text-foam/60 hover:text-tide-teal mb-8 transition-colors">
+            <NavLink to="/programs" className="inline-flex items-center gap-2 text-foam/60 dark:text-foam/60 light:text-light-text-tertiary hover:text-tide-teal dark:hover:text-tide-teal light:hover:text-teal-light-optimized mb-8 transition-colors">
                 <CaretLeft size={20} />
                 <span>{t('programs.back', 'Back to Programs')}</span>
             </NavLink>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Image */}
-                <div className="rounded-2xl overflow-hidden shadow-glow-teal/30 border border-white/10 relative order-2 lg:order-1">
+                <div className="rounded-2xl overflow-hidden shadow-glow-teal/30 dark:shadow-glow-teal/30 light:shadow-lg border border-white/10 dark:border-white/10 light:border-light-border relative order-2 lg:order-1">
                     <img src={program.image} alt={slug} className="w-full h-auto object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-abyss-navy/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-abyss-navy/60 to-transparent dark:from-abyss-navy/60 light:from-white/40"></div>
                 </div>
 
                 {/* Content */}
                 <div className="order-1 lg:order-2">
-                    <h1 className="text-4xl md:text-5xl text-white font-heading font-bold mb-6">
+                    <h1 className="text-4xl md:text-5xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-6">
                         {t(`programs.${program.title}`, slug.replace('-', ' ').toUpperCase())}
                     </h1>
-                    <p className="text-foam/80 text-lg leading-relaxed mb-8">
+                    <p className="text-foam/80 dark:text-foam/80 light:text-light-text-secondary text-lg leading-relaxed mb-8">
                         {t(`programs.${slug.replace('-', '_')}.long_desc`, "Detailed program description goes here. This creates an immersive experience for the user explaining the benefits and methodology of this specific program.")}
                     </p>
 
                     <div className="mb-10 space-y-4">
-                        <h3 className="text-xl text-white font-bold">{t('programs.features', 'Key Features')}</h3>
+                        <h3 className="text-xl text-white dark:text-white light:text-light-text-primary font-bold">{t('programs.features', 'Key Features')}</h3>
                         <ul className="space-y-3">
                             {(Array.isArray(program.features) 
                                 ? program.features 
                                 : (program.features[language] || program.features.en)
                             ).map((feature, idx) => (
-                                <li key={idx} className="flex items-center gap-3 text-foam/80">
-                                    <CheckCircle className="text-tide-teal" size={24} weight="fill" />
+                                <li key={idx} className="flex items-center gap-3 text-foam/80 dark:text-foam/80 light:text-light-text-secondary">
+                                    <CheckCircle className="text-tide-teal dark:text-tide-teal light:text-teal-light-optimized" size={24} weight="fill" />
                                     {feature}
                                 </li>
                             ))}
