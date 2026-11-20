@@ -15,24 +15,30 @@ module.exports = {
                 'abyss-light': '#0F3A50',
                 'tide-teal': '#0E8A9A',
                 'teal-dark': '#0A6B78',
+                // AA-safe roles split out of Tide Teal: solid fill vs. text on dark
+                'teal-fill': '#0B7382',
+                'teal-bright': '#3BAFC0',
                 'coral-spark': '#FF6A3D',
                 'coral-dark': '#E0552D',
+                // Primary CTA hover brightens, because the label is navy ink
+                'coral-glow': '#FF8358',
                 'foam': '#ECF7F8',
-                
-                // Light Mode Optimized Colors (WCAG AA+)
-                'light-bg-primary': '#FAFAFA',
-                'light-bg-secondary': '#F3F4F6',
-                'light-bg-tertiary': '#E5E7EB',
-                'light-text-primary': '#111827',
-                'light-text-secondary': '#374151',
-                'light-text-tertiary': '#4B5563',
-                'light-text-muted': '#6B7280',
-                'light-border': '#D1D5DB',
-                'light-border-strong': '#9CA3AF',
-                
-                // Coral optimizado para modo claro (mayor contraste)
-                'coral-light-optimized': '#EA580C',
-                // Teal optimizado para modo claro
+                'foam-secondary': '#C5D9DC',
+                'foam-muted': '#9BB5BA',
+
+                // Light Mode — ocean-tinted neutrals (WCAG AA+)
+                'light-bg-primary': '#F4F9FA',
+                'light-bg-secondary': '#E8F1F3',
+                'light-bg-tertiary': '#D5E4E8',
+                'light-text-primary': '#0B2A3C',
+                'light-text-secondary': '#1A4558',
+                'light-text-tertiary': '#2F5F72',
+                'light-text-muted': '#3D6373',
+                'light-border': '#B7D0D6',
+                'light-border-strong': '#7FA3AE',
+
+                // Coral / teal optimized for light mode
+                'coral-light-optimized': '#C2410C',
                 'teal-light-optimized': '#0F766E',
             },
             fontFamily: {
@@ -42,9 +48,20 @@ module.exports = {
                 data: ['Roboto Mono', 'monospace'],
             },
             fontSize: {
-                'h1': 'clamp(2rem, 5vw, 3rem)',
-                'h2': 'clamp(1.5rem, 4vw, 2rem)',
-                'h3': 'clamp(1.25rem, 3vw, 1.5rem)',
+                display: ['clamp(2.25rem, 5.5vw, 3.5rem)', { lineHeight: '1.12', letterSpacing: '-0.02em', fontWeight: '800' }],
+                h1: ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.12', letterSpacing: '-0.02em', fontWeight: '700' }],
+                h2: ['clamp(1.5rem, 4vw, 2rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
+                h3: ['clamp(1.25rem, 3vw, 1.5rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
+                label: ['0.875rem', { lineHeight: '1.3', letterSpacing: '0.06em', fontWeight: '600' }],
+                meta: ['0.75rem', { lineHeight: '1.45', letterSpacing: '0.02em' }],
+            },
+            maxWidth: {
+                prose: '65ch',
+            },
+            letterSpacing: {
+                display: '-0.02em',
+                heading: '-0.015em',
+                label: '0.06em',
             },
             backdropBlur: {
                 'glass': '16px',
@@ -90,18 +107,15 @@ module.exports = {
                 '600': '600ms',
             },
             boxShadow: {
-                'glow-teal': '0 0 30px rgba(14, 138, 154, 0.4), 0 0 60px rgba(14, 138, 154, 0.2)',
-                'glow-coral': '0 0 30px rgba(255, 106, 61, 0.4), 0 0 60px rgba(255, 106, 61, 0.2)',
-                'glow-white': '0 0 30px rgba(236, 247, 248, 0.3), 0 0 60px rgba(236, 247, 248, 0.15)',
+                glass: '0 8px 32px rgba(0, 0, 0, 0.3)',
+                'glow-teal': '0 8px 30px rgba(14, 138, 154, 0.35), 0 0 48px rgba(14, 138, 154, 0.18)',
+                'glow-coral': '0 8px 30px rgba(255, 106, 61, 0.35), 0 0 48px rgba(255, 106, 61, 0.18)',
+                'glow-white': '0 8px 30px rgba(236, 247, 248, 0.25), 0 0 48px rgba(236, 247, 248, 0.12)',
             },
         },
     },
     darkMode: 'class',
     plugins: [
-        // Plugin para habilitar la variante light:
-        function({ addVariant }) {
-            addVariant('light', '.light &')
-        },
         heroui({
             themes: {
                 dark: {
@@ -110,20 +124,20 @@ module.exports = {
                         foreground: '#ECF7F8',
                         primary: {
                             DEFAULT: '#FF6A3D',
-                            foreground: '#ECF7F8',
+                            foreground: '#0B2A3C',
                         },
                         secondary: {
-                            DEFAULT: '#0E8A9A',
-                            foreground: '#ECF7F8',
+                            DEFAULT: '#0B7382',
+                            foreground: '#FFFFFF',
                         },
                     },
                 },
                 light: {
                     colors: {
-                        background: '#FAFAFA',
-                        foreground: '#111827',
+                        background: '#F4F9FA',
+                        foreground: '#0B2A3C',
                         primary: {
-                            DEFAULT: '#EA580C',
+                            DEFAULT: '#C2410C',
                             foreground: '#FFFFFF',
                         },
                         secondary: {
@@ -134,5 +148,12 @@ module.exports = {
                 },
             },
         }),
+        // Must be registered AFTER heroui(): HeroUI defines its own `light` and
+        // `dark` variants as self-selectors (&.light), which silently overwrite
+        // these. The theme class lives on <html>, so both must match an ancestor.
+        function ({ addVariant }) {
+            addVariant('light', '.light &');
+            addVariant('dark', '.dark &');
+        },
     ],
 };

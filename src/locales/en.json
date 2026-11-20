@@ -1,252 +1,404 @@
 {
-    "nav": {
-        "home": "Home",
-        "programs": "Programs",
-        "courses": "Courses",
-        "community": "Community",
-        "about": "About",
-        "contact": "Contact",
-        "getStarted": "GET STARTED"
+  "nav": {
+    "home": "Home",
+    "programs": "Coaching by discipline",
+    "courses": "Pool plans",
+    "community": "Community",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get guidance",
+    "headerCta": "Ask the coach"
+  },
+  "hero": {
+    "title": "Endurance coaching designed with science, born from the ocean",
+    "subtitle": "Swim and triathlon coaching in Zarcero, Costa Rica",
+    "description": "Structured plans for athletes with real lives: clear biomechanics, sustainable discipline, and a community built for longevity.",
+    "image_alt": "Atlan Performance swimmers training in the pool",
+    "cta": "Get coach guidance",
+    "secondary_cta": "Compare pool plans",
+    "scroll_cue": "Scroll"
+  },
+  "home": {
+    "offer": {
+      "title": "Compare group pool plans",
+      "description": "Compare frequency and monthly fees for group sessions at APAMAR. For juniors, open water, running, or triathlon, explore coaching by discipline.",
+      "programs_link": "Explore coaching by discipline",
+      "location": "400 m West of the Park, 21101 Zarcero, Costa Rica",
+      "plan_cta": "View {{plan}} details and schedule",
+      "best_for": "Best for",
+      "guidance_title": "Not sure which option fits?",
+      "guidance_description": "Tell us your level, goal, and availability. The coach will guide you toward a pool plan or discipline-specific coaching.",
+      "guidance_cta": "Get coach guidance",
+      "coach_line": "Head coach · biomechanics & Ironman",
+      "schedules_cta": "Go to plans & schedules",
+      "session_times": "Tue & Thu 7:00 p.m. · Sat 8:30 a.m. & 9:30 a.m."
     },
-    "hero": {
-        "title": "Endurance Coaching Designed with Science, Born from the Ocean",
-        "subtitle": "",
-        "description": "Structured training for swimmers and triathletes who seek discipline, biomechanical mastery, and a community built for longevity.",
-        "cta": "START NOW!"
-    },
-    "programs": {
-        "title": "Our Programs",
-        "subtitle": "Specialized coaching for every stage of your athlete journey.",
-        "swimming_adults": {
-            "title": "Swimming Adults",
-            "desc": "Improve technique and fitness in a structured environment.",
-            "long_desc": "Our adult program focuses on biomechanical efficiency and endurance development. Whether beginner or expert, our coaches optimize the plan for your level."
+    "method": {
+      "title": "How we turn your context into a plan",
+      "description": "Three decisions connect your level, goal, and availability with sustainable training.",
+      "proof_note": "No magic formulas: every decision connects back to your context.",
+      "cta": "See the coach's experience",
+      "steps": {
+        "start": {
+          "title": "Your starting point",
+          "description": "Share your level, goal, and the times you can realistically sustain."
         },
-        "swimming_juniors": {
-            "title": "Swimming Juniors",
-            "desc": "Aquatic skill development for young athletes.",
-            "long_desc": "We foster a love for water while teaching correct technique, discipline, and teamwork for the next generation of swimmers."
+        "align": {
+          "title": "The coach's judgment",
+          "description": "The coach connects discipline, frequency, and technical focus with your context."
         },
-        "open_water": {
-            "title": "Open Water",
-            "desc": "Master the ocean with safety and confidence.",
-            "long_desc": "Specific ocean training: sighting, entries, exits, and current management so you can swim safely in any condition."
-        },
-        "running": {
-            "title": "Running",
-            "desc": "Reach your goals on road or trail.",
-            "long_desc": "Personalized plans for runners from 5k to ultramarathon, with emphasis on running form and injury prevention."
-        },
-        "triathlon": {
-            "title": "Triathlon",
-            "desc": "Integrate swim, bike, and run into one performance.",
-            "long_desc": "Comprehensive preparation for triathletes of all distances. We optimize your training to perform at your best across all three disciplines."
-        },
-        "learn_more": "Learn More",
-        "get_started": "GET STARTED",
-        "back": "Back to Programs",
-        "features": "Key Features"
-    },
-    "courses": {
-        "title": "Courses & Schedules",
-        "subtitle": "Choose the plan that fits your goals and train with us.",
-        "select_plan": "Select Plan",
-        "monthly_fee": "MONTHLY FEE",
-        "most_popular": "MOST POPULAR",
-        "schedule_title": "COURSE SCHEDULE",
-        "schedule_subtitle": "Plan to arrive 15 minutes early.",
-        "location_title": "APAMAR POOL FACILITIES",
-        "location_address": "Address:",
-        "location_address_full": "400 m West of the Park, 21101 Zarcero, Costa Rica",
-        "location_from": "From Zarcero Park",
-        "location_get_directions": "GET DIRECTIONS",
-        "location_download": "DOWNLOAD LOCATION",
-        "location_open_maps": "Open in Google Maps",
-        "location_view_map": "View map",
-        "pool_temp": "Average pool temperature",
-        "important_info": "IMPORTANT COURSE INFORMATION",
-        "important_applies": "Applies to all schedules",
-        "info_age": "For participants aged 8 and older.",
-        "info_duration": "Average class duration: 60 minutes.",
-        "info_group": "All sessions are group-based, organized by level:",
-        "info_beginner": "Beginner",
-        "info_intermediate": "Intermediate",
-        "info_advanced": "Advanced",
-        "info_rules": "All participants must follow the pool rules and regulations established by the facility.",
-        "days": {
-            "tuesday": "Tuesday",
-            "thursday": "Thursday",
-            "saturday": "Saturday"
-        },
-        "dolphin": {
-            "name": "DOLPHIN",
-            "price": "₡20,000",
-            "description": "Experience your first sessions with Atlan.",
-            "sessions": "1 session per week",
-            "focus": "Focus on fundamentals (technique + confidence)",
-            "progression": "Coach-guided progression",
-            "button": "START NOW"
-        },
-        "shark": {
-            "name": "SHARK",
-            "price": "₡25,000",
-            "description": "For athletes aiming to improve and join events.",
-            "sessions": "2 sessions per week",
-            "levels": "All levels",
-            "training": "Progress-focused training (technique + fitness)",
-            "button": "JOIN"
-        },
-        "orca": {
-            "name": "ORCA",
-            "price": "₡30,000",
-            "description": "Built for event participation and competition goals.",
-            "sessions": "3 sessions per week",
-            "levels": "All levels",
-            "preparation": "Performance-oriented preparation",
-            "button": "GO PRO"
-        },
-        "contact_card": {
-            "title": "CONTACT US",
-            "subtitle": "Have questions or ready to start?",
-            "description": "Fill out our contact form and we'll get back to you soon to answer your questions and help you start your journey with Atlan.",
-            "button": "CONTACT US",
-            "support_hours": "Support hours",
-            "response_time": "Response time: 24-48 hours"
+        "confirm": {
+          "title": "Your next step",
+          "description": "You receive the plan, schedule, and how to begin your first session."
         }
+      }
     },
-    "about": {
-        "title": "Head Coach",
-        "eyebrow": "Head Coach & Founder",
-        "name": "Edgar Bonilla",
-        "bio": {
-            "paragraph1": "My journey started in the water, but coaching became my obsession because of one question:",
-            "paragraph1_cont": " do some athletes improve while others stall?",
-            "paragraph2": "At Atlan, we don't rely on \"magic formulas.\" We rely on",
-            "paragraph2_cont": ", clear biomechanics, and habits you can actually sustain.",
-            "paragraph3": "My goal is to help you unlock your potential —as an athlete and as a person— with a plan built around your real life.",
-            "why": "why",
-            "smartConsistency": "smart consistency"
-        },
-        "quote": "Train smart. Move with purpose. Progress follows.",
-        "credentials": {
-            "swimming_coach": "International Certified Swimming Coach",
-            "biomechanics": "Swimming Biomechanics Specialist",
-            "ironman": "International Ironman Certified Coach — Triathlon",
-            "experience": "Years Coaching Experience",
-            "years": "25+"
-        },
-        "highlights": {
-            "philosophy": {
-                "title": "Philosophy — Liquid Precision",
-                "oneliner": "Train smart, not more. Every session has a clear purpose.",
-                "bullet1": "Biomechanics-first technique cues",
-                "bullet2": "Sustainable consistency (no burnout)"
-            },
-            "experience": {
-                "title": "Experience — Built in the Water",
-                "oneliner": "15+ years coaching • 25+ years in the sport.",
-                "bullet1": "Progression, recovery, and habits that stick",
-                "bullet2": "Race-ready planning across swim + triathlon"
-            },
-            "mission": {
-                "title": "Mission — Unlock Your Potential",
-                "oneliner": "Long-term development, built around real life.",
-                "bullet1": "Longevity, clarity, and confidence",
-                "bullet2": "A plan aligned to your physiology + goals"
-            }
-        }
+    "close": {
+      "title": "Ready, or still deciding?",
+      "subtitle": "Reach us on WhatsApp or the form — your choice.",
+      "description": "Tell us your level and goal. We confirm availability and the next step for your first session.",
+      "response_time": "WhatsApp: usually same-day replies",
+      "support_hours": "Sessions: Tuesday & Thursday 7:00 p.m. · Saturday 8:30 a.m. & 9:30 a.m.",
+      "whatsapp": "Message on WhatsApp",
+      "form": "Get guidance by form"
+    }
+  },
+  "programs": {
+    "title": "Coaching by discipline",
+    "subtitle": "Choose adult swim, juniors, open water, running, or triathlon. Group-session fees and weekly times are under Pool plans.",
+    "plans_link": "Compare pool plans",
+    "swimming_adults": {
+      "title": "Swimming Adults",
+      "desc": "Improve technique and fitness in a structured environment.",
+      "long_desc": "Our adult program focuses on biomechanical efficiency and endurance development. Whether beginner or expert, our coaches optimize the plan for your level."
     },
-    "contact": {
-        "title": "Start Your Journey",
-        "subtitle": "Ready to train with Liquid Precision? Fill out the form below.",
-        "submit": "Send Request",
-        "success_title": "Request Received!",
-        "success_msg": "We will contact you shortly to confirm your trial session."
+    "swimming_juniors": {
+      "title": "Swimming Juniors",
+      "desc": "Aquatic skill development for young athletes.",
+      "long_desc": "We foster a love for water while teaching correct technique, discipline, and teamwork for the next generation of swimmers."
     },
-    "usp": {
-        "title": "Liquid Precision",
-        "description": "Our methodology combines data-driven science with the fluid nature of water sports.",
-        "science": {
-            "title": "Scientific Integrity",
-            "desc": "Training plans based on physiological principles, not guesswork."
-        },
-        "discipline": {
-            "title": "Structured Discipline",
-            "desc": "Consistency is key. We provide the framework for your success."
-        },
-        "resilience": {
-            "title": "Mental Resilience",
-            "desc": "Building toughness in the water to conquer challenges on land."
-        },
-        "community": {
-            "title": "Athlete-Centric",
-            "desc": "A supportive community where every athlete's journey matters."
-        }
+    "open_water": {
+      "title": "Open Water",
+      "desc": "Master the ocean with safety and confidence.",
+      "long_desc": "Specific ocean training: sighting, entries, exits, and current management so you can swim safely in any condition."
+    },
+    "running": {
+      "title": "Running",
+      "desc": "Reach your goals on road or trail.",
+      "long_desc": "Personalized plans for runners from 5k to ultramarathon, with emphasis on running form and injury prevention."
+    },
+    "triathlon": {
+      "title": "Triathlon",
+      "desc": "Integrate swim, bike, and run into one performance.",
+      "long_desc": "Comprehensive preparation for triathletes of all distances. We optimize your training to perform at your best across all three disciplines."
+    },
+    "learn_more": "View program details",
+    "get_started": "Request coaching",
+    "back": "Back to programs",
+    "features": "What you work on"
+  },
+  "courses": {
+    "title": "Pool plans & schedules",
+    "subtitle": "Choose how often you train in APAMAR group sessions. For juniors, open water, running, or triathlon, explore Coaching by discipline.",
+    "programs_link": "Explore coaching by discipline",
+    "select_plan": "Request this plan",
+    "monthly_fee": "Monthly fee",
+    "most_popular": "Most popular",
+    "schedule_title": "Weekly session times",
+    "schedule_subtitle": "Arrive 15 minutes early so we can start on time.",
+    "location_title": "APAMAR pool",
+    "location_address": "Address:",
+    "location_address_full": "400 m West of the Park, 21101 Zarcero, Costa Rica",
+    "location_from": "From Zarcero Park",
+    "location_get_directions": "Get directions",
+    "location_download": "Download location",
+    "location_open_maps": "Open in Google Maps",
+    "location_view_map": "View map",
+    "pool_temp": "Average pool temperature",
+    "important_info": "What to know before you join",
+    "important_applies": "Applies to all schedules",
+    "info_age": "For participants aged 8 and older.",
+    "info_duration": "Average class duration: 60 minutes.",
+    "info_group": "All sessions are group-based, organized by level:",
+    "info_beginner": "Beginner",
+    "info_intermediate": "Intermediate",
+    "info_advanced": "Advanced",
+    "info_rules": "All participants must follow the pool rules and regulations established by the facility.",
+    "days": {
+      "tuesday": "Tuesday",
+      "thursday": "Thursday",
+      "saturday": "Saturday"
+    },
+    "dolphin": {
+      "name": "DOLPHIN",
+      "price": "₡23,000",
+      "description": "First sessions at Atlan — technique and confidence in the water.",
+      "sessions": "1 session per week",
+      "focus": "Focus on fundamentals (technique + confidence)",
+      "best_for": "First sessions, strong fundamentals, and water confidence.",
+      "progression": "Coach-guided progression",
+      "button": "Request this plan"
+    },
+    "shark": {
+      "name": "SHARK",
+      "price": "₡25,000",
+      "description": "Two sessions a week to build fitness and prepare for events.",
+      "sessions": "2 sessions per week",
+      "levels": "All levels",
+      "training": "Progress-focused training (technique + fitness)",
+      "best_for": "Steady progress in technique and fitness.",
+      "button": "Request this plan"
+    },
+    "orca": {
+      "name": "ORCA",
+      "price": "₡28,000",
+      "description": "Three sessions a week for event participation and race goals.",
+      "sessions": "3 sessions per week",
+      "levels": "All levels",
+      "preparation": "Performance-oriented preparation",
+      "best_for": "Race preparation and performance goals.",
+      "button": "Request this plan"
+    },
+    "contact_card": {
+      "title": "Still deciding?",
+      "subtitle": "Questions about level, schedule, or which plan fits?",
+      "description": "Send the form with your goal — we confirm availability and the next step for your first session.",
+      "button": "Open contact form",
+      "support_hours": "Sessions: Tuesday & Thursday 7:00 p.m. · Saturday 8:30 a.m. & 9:30 a.m. · APAMAR Pool, Zarcero",
+      "response_time": "WhatsApp: usually same-day · Form: 24–48 hours"
+    }
+  },
+  "about": {
+    "title": "Head Coach",
+    "eyebrow": "Head Coach & Founder",
+    "name": "Edgar Bonilla",
+    "bio": {
+      "paragraph1": "My journey started in the water, but coaching became my obsession because of one question:",
+      "paragraph1_cont": " do some athletes improve while others stall?",
+      "paragraph2": "At Atlan, we don't rely on \"magic formulas.\" We rely on",
+      "paragraph2_cont": ", clear biomechanics, and habits you can actually sustain.",
+      "paragraph3": "My goal is to help you unlock your potential —as an athlete and as a person— with a plan built around your real life.",
+      "why": "why",
+      "smartConsistency": "smart consistency"
+    },
+    "quote": "Train smart. Move with purpose. Progress follows.",
+    "credentials": {
+      "swimming_coach": "International Certified Swimming Coach",
+      "biomechanics": "Swimming Biomechanics Specialist",
+      "ironman": "International Ironman Certified Coach — Triathlon",
+      "experience": "Years Coaching Experience",
+      "years": "25+"
+    },
+    "highlights": {
+      "philosophy": {
+        "title": "Philosophy — Liquid Precision",
+        "oneliner": "Train smart, not more. Every session has a clear purpose.",
+        "bullet1": "Biomechanics-first technique cues",
+        "bullet2": "Sustainable consistency (no burnout)"
+      },
+      "experience": {
+        "title": "Experience — Built in the Water",
+        "oneliner": "15+ years coaching • 25+ years in the sport.",
+        "bullet1": "Progression, recovery, and habits that stick",
+        "bullet2": "Race-ready planning across swim + triathlon"
+      },
+      "mission": {
+        "title": "Mission — Unlock Your Potential",
+        "oneliner": "Long-term development, built around real life.",
+        "bullet1": "Longevity, clarity, and confidence",
+        "bullet2": "A plan aligned to your physiology + goals"
+      }
+    }
+  },
+  "contact": {
+    "title": "Start Your Journey",
+    "subtitle": "Ready to train with Liquid Precision? Fill out the form below.",
+    "submit": "Send Request",
+    "success_title": "Request Received!",
+    "success_msg": "We will contact you shortly to confirm your trial session.",
+    "send_another": "Send another request",
+    "info_email": "Email",
+    "info_location": "Location",
+    "request_title": "New Contact Request",
+    "default_message": "Hello, I am interested in your services.",
+    "my_contact_data": "Contact Details"
+  },
+  "usp": {
+    "title": "Liquid Precision",
+    "description": "A coaching method that pairs measurable biomechanics with plans that fit a busy week.",
+    "cta": "Compare pool plans",
+    "science": {
+      "title": "Scientific integrity",
+      "desc": "Every session has a physiological purpose: technique, stimulus, and recovery — not guesswork."
+    },
+    "discipline": {
+      "title": "Structured discipline",
+      "desc": "Clear level-based progression (beginner to advanced) so consistency lasts without burnout."
+    },
+    "resilience": {
+      "title": "Mental Resilience",
+      "desc": "Building toughness in the water to conquer challenges on land."
     },
     "community": {
-        "title": "Join Our Community",
-        "subtitle": "Connect with fellow athletes, share your journey, and be part of something bigger.",
-        "features": {
-            "connect": {
-                "title": "Connect with Athletes",
-                "desc": "Meet swimmers, runners, and triathletes who share your passion for endurance sports."
-            },
-            "support": {
-                "title": "Support & Motivation",
-                "desc": "Get encouragement from coaches and teammates. We celebrate every milestone together."
-            },
-            "share": {
-                "title": "Share Your Journey",
-                "desc": "Post your progress, ask questions, and inspire others with your dedication."
-            }
-        },
-        "join": {
-            "title": "Ready to Join?",
-            "description": "Follow us on Instagram or join our WhatsApp group to stay connected with the Atlan community."
-        }
-    },
-    "newsletter": {
-        "title": "Join the Atlan Community",
-        "desc": "Get swimming tips, training advice, and program updates directly to your inbox.",
-        "placeholder": "Your email address",
-        "button": "Subscribe",
-        "success": "Thanks for subscribing!",
-        "disclaimer": "No spam. Unsubscribe at any time."
-    },
-    "form": {
-        "required": "This field is required",
-        "invalid_email": "Please enter a valid email"
-    },
-    "footer": {
-        "rights": "All rights reserved."
-    },
-    "testimonials": {
-        "title": "Athlete Testimonials",
-        "subtitle": "Real results from athletes who train with Liquid Precision.",
-        "amanda": {
-            "name": "Amanda B.",
-            "role": "Recreational Athlete",
-            "content": "Coach is a committed professional—passionate about what he does and highly knowledgeable. I recommend him 100% to anyone looking to improve their athletic performance seriously and effectively."
-        },
-        "joaquin": {
-            "name": "Joaquín R.",
-            "role": "Recreational Athlete",
-            "content": "I had learned to swim after retiring. Thanks to the guidance and dedication and very committed. Today I swim with calm, technique, and I enjoy it to the maximum."
-        },
-        "steisy": {
-            "name": "Steisy C.",
-            "role": "Swimmer",
-            "content": "My experience has been more than rewarding, it is a place to feel safe and relieve, the way in which Coach performs his work is very professional and transmits his love for the sport."
-        },
-        "agustin": {
-            "name": "Agustin F.",
-            "role": "Swimmer - Triathlete",
-            "content": "I've trained with him in 2 moments. First as teenage swimmer and now as an adult triathlete, where we have achieved participation and podiums, sprint, olympic, 70.3 distance."
-        },
-        "rodrigo": {
-            "name": "Rodrigo R.",
-            "role": "Triathlete",
-            "content": "My dream was to be able to do a triathlon. I started my process with the Coach and not only managed to do my first triathlon but I turned professional training into part of my lifestyle, including 5 Ironman 70.3."
-        }
+      "title": "Athlete-centered",
+      "desc": "Level-based groups and coach guidance: the plan adapts to your life, not the other way around."
     }
+  },
+  "community": {
+    "title": "Join Our Community",
+    "subtitle": "Connect with fellow athletes, share your journey, and be part of something bigger.",
+    "features": {
+      "connect": {
+        "title": "Connect with Athletes",
+        "desc": "Meet swimmers, runners, and triathletes who share your passion for endurance sports."
+      },
+      "support": {
+        "title": "Support & Motivation",
+        "desc": "Get encouragement from coaches and teammates. We celebrate every milestone together."
+      },
+      "share": {
+        "title": "Share Your Journey",
+        "desc": "Post your progress, ask questions, and inspire others with your dedication."
+      }
+    },
+    "join": {
+      "title": "Ready to Join?",
+      "description": "Follow us on Instagram or join our WhatsApp group to stay connected with the Atlan community."
+    }
+  },
+  "newsletter": {
+    "title": "Join the Atlan Community",
+    "desc": "Get swimming tips, training advice, and program updates directly to your inbox.",
+    "placeholder": "Your email address",
+    "button": "Subscribe",
+    "success": "Thanks for subscribing!",
+    "disclaimer": "No spam. Unsubscribe at any time."
+  },
+  "form": {
+    "full_name": "Full Name",
+    "email": "Email",
+    "phone": "Phone (WhatsApp)",
+    "plan": "Interested Plan",
+    "message": "Message (Optional)",
+    "identity": "Identity Card / Passport",
+    "birthday": "Date of Birth",
+    "course_level": "Course Level",
+    "contact_method": "Preferred Contact Method",
+    "preferred_schedules": "Preferred Schedules",
+    "required": "This field is required",
+    "invalid_email": "Please enter a valid email",
+    "too_long": "Please shorten this field",
+    "select_plan": "Select a plan",
+    "select_schedule": "Select at least one schedule",
+    "submit_error": "We could not save your request. Try again or continue on WhatsApp.",
+    "offline": "You appear to be offline. Check your connection and try again, or continue on WhatsApp.",
+    "unavailable": "Form submissions are temporarily unavailable. Please contact us on WhatsApp.",
+    "try_again": "Try again",
+    "continue_whatsapp": "Continue on WhatsApp",
+    "schedules": {
+      "morning": "Morning (5:00 AM - 8:00 AM)",
+      "mid_morning": "Mid-morning (8:00 AM - 11:00 AM)",
+      "afternoon": "Afternoon (12:00 PM - 4:00 PM)",
+      "evening": "Evening (5:00 PM - 8:00 PM)",
+      "weekend": "Weekend"
+    },
+    "levels": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "triathlon": "Triathlon"
+    },
+    "methods": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "call": "Phone Call"
+    }
+  },
+  "common": {
+    "not_found_title": "Page Not Found",
+    "not_found_desc": "The page you are looking for doesn't exist or has been moved.",
+    "back_home": "Back to Home"
+  },
+  "subscription": {
+    "title": "Join the Team",
+    "subtitle": "Start your journey with Atlan Performance today.",
+    "submit": "Complete Registration",
+    "success_title": "Registration Successful!",
+    "success_msg": "Your registration has been received. We will be in touch shortly.",
+    "request_title": "Course registration"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "tagline": "Designed with Liquid Precision."
+  },
+  "a11y": {
+    "skip_to_content": "Skip to main content",
+    "primary_nav": "Primary",
+    "language": "Language",
+    "language_es": "Switch to Spanish",
+    "language_en": "Switch to English",
+    "toggle_theme": "Toggle theme",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "mobile_menu": "Mobile navigation",
+    "prev_testimonials": "Previous testimonials",
+    "next_testimonials": "Next testimonials",
+    "testimonial_slides": "Testimonial slides",
+    "loading_page": "Loading page",
+    "go_to_slide": "Go to slide {{n}}",
+    "play_carousel": "Play testimonials",
+    "pause_carousel": "Pause testimonials",
+    "loading": "Loading"
+  },
+  "legal": {
+    "load_error": "Error loading policy content. Please try again later.",
+    "retry": "Try again"
+  },
+  "testimonials": {
+    "title": "Athlete Testimonials",
+    "subtitle": "Real athletes, in their own words.",
+    "read_full": "Read full testimonial",
+    "position": "Testimonial {{current}} of {{total}}",
+    "amanda": {
+      "name": "Amanda B.",
+      "role": "Recreational Athlete",
+      "outcome": "Serious, effective coaching",
+      "excerpt": "Coach is a committed professional—passionate about what he does and highly knowledgeable.",
+      "content": "Coach is a committed professional—passionate about what he does and highly knowledgeable. I recommend him 100% to anyone looking to improve their athletic performance seriously and effectively."
+    },
+    "joaquin": {
+      "name": "Joaquín R.",
+      "role": "Recreational Athlete",
+      "outcome": "Learning to swim after retirement",
+      "excerpt": "Today I swim calmly, with technique, and enjoy it fully.",
+      "content": "I learned to swim after retiring. Thanks to the coach's guidance, dedication, and commitment, today I swim calmly, with technique, and enjoy it fully."
+    },
+    "steisy": {
+      "name": "Steisy C.",
+      "role": "Swimmer",
+      "outcome": "Safety and confidence in the water",
+      "excerpt": "My experience has been more than rewarding—a place where I feel safe and at ease.",
+      "content": "My experience has been more than rewarding—a place where I feel safe and at ease. The coach works very professionally and shares his love for the sport."
+    },
+    "agustin": {
+      "name": "Agustin F.",
+      "role": "Swimmer - Triathlete",
+      "outcome": "Podiums in sprint, Olympic, and 70.3",
+      "excerpt": "First as teenage swimmer and now as an adult triathlete, where we have achieved participation and podiums, sprint, olympic, 70.3 distance.",
+      "content": "I've trained with him in 2 moments. First as teenage swimmer and now as an adult triathlete, where we have achieved participation and podiums, sprint, olympic, 70.3 distance."
+    },
+    "rodrigo": {
+      "name": "Rodrigo R.",
+      "role": "Triathlete",
+      "outcome": "First triathlon and five Ironman 70.3 events",
+      "excerpt": "I started my process with the Coach and not only managed to do my first triathlon but I turned professional training into part of my lifestyle, including 5 Ironman 70.3.",
+      "content": "My dream was to be able to do a triathlon. I started my process with the Coach and not only managed to do my first triathlon but I turned professional training into part of my lifestyle, including 5 Ironman 70.3."
+    }
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HeroUIProvider } from '@heroui/react';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from './hooks/useTheme';
 import App from './App';
 import './utils/i18n';
 import './styles/globals.css';
@@ -9,9 +10,11 @@ import './styles/globals.css';
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>
-            <HeroUIProvider>
-                <App />
-            </HeroUIProvider>
+            <ThemeProvider>
+                <HeroUIProvider>
+                    <App />
+                </HeroUIProvider>
+            </ThemeProvider>
         </BrowserRouter>
     </React.StrictMode>
 );

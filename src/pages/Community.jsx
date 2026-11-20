@@ -11,17 +11,17 @@ const Community = () => {
 
     const communityFeatures = [
         {
-            icon: <Users size={48} weight="duotone" className="text-tide-teal" />,
+            icon: <Users size={48} weight="duotone" className="text-teal-bright dark:text-teal-bright light:text-teal-light-optimized" />,
             title: t('community.features.connect.title'),
             description: t('community.features.connect.desc'),
         },
         {
-            icon: <Heart size={48} weight="duotone" className="text-coral-spark" />,
+            icon: <Heart size={48} weight="duotone" className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized" />,
             title: t('community.features.support.title'),
             description: t('community.features.support.desc'),
         },
         {
-            icon: <InstagramLogo size={48} weight="duotone" className="text-tide-teal" />,
+            icon: <InstagramLogo size={48} weight="duotone" className="text-teal-bright dark:text-teal-bright light:text-teal-light-optimized" />,
             title: t('community.features.share.title'),
             description: t('community.features.share.desc'),
         },
@@ -59,10 +59,10 @@ const Community = () => {
                         transition={{ duration: 0.8 }}
                         className="text-center max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-black text-white mb-6 leading-tight">
+                        <h1 className="type-display text-white dark:text-white light:text-light-text-primary mb-6">
                             {t('community.title')}
                         </h1>
-                        <p className="text-xl md:text-2xl text-foam mb-8 leading-relaxed">
+                        <p className="type-body text-lg md:text-xl text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary mb-8 max-w-prose mx-auto">
                             {t('community.subtitle')}
                         </p>
                     </motion.div>
@@ -86,11 +86,11 @@ const Community = () => {
                             <motion.div
                                 key={index}
                                 variants={itemVariants}
-                                className="glass-card p-8 rounded-2xl hover:shadow-glow-teal transition-all duration-300"
+                                className="rounded-2xl border border-white/10 dark:border-white/10 light:border-light-border bg-abyss-navy/50 dark:bg-abyss-navy/50 light:bg-light-bg-secondary p-8 transition-colors hover:border-tide-teal/40 dark:hover:border-tide-teal/40 light:hover:border-teal-light-optimized/40"
                             >
                                 <div className="mb-6">{feature.icon}</div>
-                                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                                <p className="text-foam leading-relaxed">{feature.description}</p>
+                                <h3 className="type-title text-white dark:text-white light:text-light-text-primary mb-3">{feature.title}</h3>
+                                <p className="type-body text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary">{feature.description}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -105,12 +105,12 @@ const Community = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="glass-card p-12 rounded-3xl text-center max-w-3xl mx-auto"
+                        className="rounded-2xl border border-tide-teal/30 dark:border-tide-teal/30 light:border-teal-light-optimized/30 bg-abyss-light/50 dark:bg-abyss-light/50 light:bg-light-bg-secondary p-8 md:p-12 text-center max-w-3xl mx-auto"
                     >
-                        <h2 className="text-3xl md:text-4xl font-display font-black text-white mb-6">
+                        <h2 className="type-headline text-white dark:text-white light:text-light-text-primary mb-4">
                             {t('community.join.title')}
                         </h2>
-                        <p className="text-lg text-foam mb-8 leading-relaxed">
+                        <p className="type-body text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary mb-8 max-w-prose mx-auto">
                             {t('community.join.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

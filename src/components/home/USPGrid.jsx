@@ -1,99 +1,72 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Atom, Waves, UsersThree, ArrowRight } from '@phosphor-icons/react';
 import { useLanguage } from '@hooks/useLanguage';
-import { Atom, WebhooksLogo, Brain, UserFocus } from '@phosphor-icons/react';
-import { motion } from 'framer-motion';
-import Card from '@components/ui/Card';
 
 const USPGrid = () => {
     const { t } = useLanguage();
-    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const pillars = [
         {
-            icon: <Atom weight="duotone" className="text-coral-spark" size={48} />,
+            icon: Atom,
             titleKey: 'usp.science.title',
             descKey: 'usp.science.desc',
         },
         {
-            icon: <WebhooksLogo weight="duotone" className="text-coral-spark" size={48} />,
+            icon: Waves,
             titleKey: 'usp.discipline.title',
             descKey: 'usp.discipline.desc',
         },
         {
-            icon: <Brain weight="duotone" className="text-coral-spark" size={48} />,
-            titleKey: 'usp.resilience.title',
-            descKey: 'usp.resilience.desc',
-        },
-        {
-            icon: <UserFocus weight="duotone" className="text-coral-spark" size={48} />,
+            icon: UsersThree,
             titleKey: 'usp.community.title',
             descKey: 'usp.community.desc',
         },
     ];
 
-    const iconVariants = {
-        initial: { 
-            scale: 1, 
-            rotate: 0,
-        },
-        hover: { 
-            scale: 1.15,
-            rotate: [0, -10, 10, -10, 0],
-            transition: {
-                duration: 0.6,
-                ease: "easeInOut",
-                rotate: {
-                    repeat: Infinity,
-                    repeatDelay: 0.5,
-                    duration: 0.8,
-                }
-            }
-        }
-    };
-
     return (
-        <section className="section bg-abyss-navy dark:bg-abyss-navy light:bg-white relative">
+        <section className="section bg-abyss-navy dark:bg-abyss-navy light:bg-light-bg-primary relative">
             <div className="container-atlan">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-4">
-                        {t('usp.title', 'Liquid Precision')}
+                <div className="max-w-prose mb-10 md:mb-14">
+                    <h2 className="type-headline text-white dark:text-white light:text-light-text-primary mb-3">
+                        {t('usp.title')}
                     </h2>
-                    <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto">
-                        {t('usp.description', 'Our methodology combines data-driven science with the fluid nature of water sports.')}
+                    <p className="type-body text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary text-base md:text-lg mb-5">
+                        {t('usp.description')}
                     </p>
+                    <a
+                        href="#planes"
+                        className="inline-flex min-h-12 items-center gap-2 type-meta text-sm font-heading font-semibold text-coral-spark dark:text-coral-spark light:text-coral-light-optimized underline-offset-4 hover:underline hover:gap-3 transition-all"
+                    >
+                        {t('usp.cta')}
+                        <ArrowRight size={16} weight="bold" aria-hidden="true" />
+                    </a>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {pillars.map((pillar, index) => (
-                        <Card
-                            key={index}
-                            hover
-                            variant="subtle"
-                            className="p-6 flex flex-col items-center text-center group"
-                            onMouseEnter={() => setHoveredIndex(index)}
-                            onMouseLeave={() => setHoveredIndex(null)}
-                        >
-                            <motion.div 
-                                className="mb-6 p-4 bg-abyss-light rounded-full group-hover:bg-abyss-light/80 
-                                         dark:bg-abyss-light dark:group-hover:bg-abyss-light/80
-                                         light:bg-light-bg-tertiary light:group-hover:bg-light-bg-secondary
-                                         transition-colors shadow-glow-teal/20 dark:shadow-glow-teal/20 light:shadow-md"
-                                variants={iconVariants}
-                                initial="initial"
-                                animate={hoveredIndex === index ? "hover" : "initial"}
+                <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 list-none p-0 m-0">
+                    {pillars.map((pillar) => {
+                        const Icon = pillar.icon;
+
+                        return (
+                            <li
+                                key={pillar.titleKey}
+                                className="border-t border-white/15 dark:border-white/15 light:border-light-border pt-5"
                             >
-                                {pillar.icon}
-                            </motion.div>
-                            <h3 className="text-xl text-white dark:text-white light:text-light-text-primary font-bold mb-3">
-                                {t(pillar.titleKey, pillar.titleKey)}
-                                {/* Fallback to key if trans missing temporarily */}
-                            </h3>
-                            <p className="text-foam/70 dark:text-foam/70 light:text-light-text-tertiary text-sm leading-relaxed">
-                                {t(pillar.descKey, "Description pending...")}
-                            </p>
-                        </Card>
-                    ))}
-                </div>
+                                <Icon
+                                    weight="duotone"
+                                    size={32}
+                                    className="text-teal-bright dark:text-teal-bright light:text-teal-light-optimized mb-3"
+                                    aria-hidden="true"
+                                />
+                                <h3 className="type-title text-white dark:text-white light:text-light-text-primary mb-2">
+                                    {t(pillar.titleKey)}
+                                </h3>
+                                <p className="type-body text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary text-sm md:text-base">
+                                    {t(pillar.descKey)}
+                                </p>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </section>
     );

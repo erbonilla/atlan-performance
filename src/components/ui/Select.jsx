@@ -1,20 +1,27 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 import { Select as HeroSelect, SelectItem } from '@heroui/react';
 
-const Select = forwardRef(({ label, error, options = [], className, ...props }, ref) => {
+const Select = forwardRef(({ label, error, options = [], className, id, placeholder, ...props }, ref) => {
+    const generatedId = useId();
+    const selectId = id || generatedId;
+
     return (
-        <div className={`flex flex-col gap-1 w-full ${className || ''}`}>
-            {label && (
-                <label className="text-sm font-medium text-foam/80 dark:text-foam/80 light:text-light-text-secondary ml-1">
-                    {label}
-                </label>
-            )}
+        <div className={`flex flex-col gap-1 w-full min-w-0 ${className || ''}`}>
             <HeroSelect
                 ref={ref}
+                id={selectId}
+                label={label}
+                labelPlacement="outside"
+                // An "outside" label sits inside the trigger until a value is
+                // picked, so a placeholder alongside it renders on top of it.
+                placeholder={label ? undefined : placeholder}
                 classNames={{
-                    trigger: 'bg-abyss-light/50 border-white/10 hover:border-tide-teal/50 data-[open=true]:border-tide-teal dark:bg-abyss-light/50 dark:border-white/10 dark:hover:border-tide-teal/50 dark:data-[open=true]:border-tide-teal light:bg-light-bg-secondary light:border-light-border light:hover:border-teal-light-optimized/50 light:data-[open=true]:border-teal-light-optimized h-12',
-                    value: 'text-foam dark:text-foam light:text-light-text-primary',
+                    label: 'text-sm font-medium text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary ml-1 break-words',
+                    trigger: 'bg-abyss-light/50 border-white/10 hover:border-tide-teal/50 data-[open=true]:border-tide-teal dark:bg-abyss-light/50 dark:border-white/10 dark:hover:border-tide-teal/50 dark:data-[open=true]:border-tide-teal light:bg-light-bg-secondary light:border-light-border light:hover:border-teal-light-optimized/50 light:data-[open=true]:border-teal-light-optimized h-12 min-h-12 min-w-0',
+                    value: 'text-foam dark:text-foam light:text-light-text-primary truncate',
+                    placeholder: 'text-foam-muted dark:text-foam-muted light:text-light-text-muted',
                     popoverContent: 'bg-abyss-navy/95 border-white/10 backdrop-blur-xl dark:bg-abyss-navy/95 dark:border-white/10 light:bg-white light:border-light-border',
+                    errorMessage: 'text-coral-spark dark:text-coral-spark light:text-coral-light-optimized break-words',
                 }}
                 isInvalid={!!error}
                 errorMessage={error}
@@ -30,11 +37,6 @@ const Select = forwardRef(({ label, error, options = [], className, ...props }, 
                     </SelectItem>
                 ))}
             </HeroSelect>
-            {error && (
-                <span className="text-xs text-coral-spark dark:text-coral-spark light:text-coral-light-optimized ml-1 animate-slide-up">
-                    {error}
-                </span>
-            )}
         </div>
     );
 });

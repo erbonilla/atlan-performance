@@ -11,10 +11,10 @@ const Subscription = () => {
     return (
         <div className="container-atlan py-12 md:py-20 animate-fade-in">
             <div className="text-center mb-12">
-                <h1 className="text-4xl md:text-5xl text-white dark:text-white light:text-light-text-primary font-heading font-bold mb-6">
+                <h1 className="type-display text-white dark:text-white light:text-light-text-primary mb-6">
                     {t('subscription.title', 'Join the Team')}
                 </h1>
-                <p className="text-foam/70 dark:text-foam/70 light:text-light-text-secondary max-w-2xl mx-auto text-lg">
+                <p className="type-body text-foam-secondary dark:text-foam-secondary light:text-light-text-secondary max-w-prose mx-auto text-lg">
                     {t('subscription.subtitle', 'Start your journey with Atlan Performance today.')}
                 </p>
             </div>

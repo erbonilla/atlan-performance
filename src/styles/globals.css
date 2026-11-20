@@ -9,39 +9,56 @@
 /* CSS Custom Properties (Design Tokens) */
 :root {
   /* Colors - Dark Mode */
-  --color-abyss-navy: #0B2A3C;
-  --color-abyss-light: #0F3A50;
-  --color-tide-teal: #0E8A9A;
-  --color-teal-dark: #0A6B78;
-  --color-coral-spark: #FF6A3D;
-  --color-coral-dark: #E0552D;
-  --color-foam: #ECF7F8;
-  
-  /* Colors - Light Mode (WCAG AA+ Optimized) */
-  --color-light-bg-primary: #FAFAFA;
-  --color-light-bg-secondary: #F3F4F6;
-  --color-light-bg-tertiary: #E5E7EB;
-  --color-light-text-primary: #111827;
-  --color-light-text-secondary: #374151;
-  --color-light-text-tertiary: #4B5563;
-  --color-light-text-muted: #6B7280;
-  --color-light-border: #D1D5DB;
-  --color-light-border-strong: #9CA3AF;
-  --color-coral-light-optimized: #EA580C;
-  --color-teal-light-optimized: #0F766E;
+  --color-abyss-navy: #0b2a3c;
+  --color-abyss-light: #0f3a50;
+  --color-tide-teal: #0e8a9a;
+  --color-teal-dark: #0a6b78;
+  --color-coral-spark: #ff6a3d;
+  --color-coral-dark: #e0552d;
+  /* Coral Spark carries navy ink on fills; hover brightens rather than darkens */
+  --color-coral-glow: #ff8358;
+  /* Tide Teal is a surface/border hue — these are its AA-safe fill and text roles */
+  --color-teal-fill: #0b7382;
+  --color-teal-bright: #3bafc0;
+  --color-foam: #ecf7f8;
+  /* Solid foam hierarchy on abyss (AA body+) — prefer over foam/NN */
+  --color-foam-secondary: #c5d9dc;
+  --color-foam-muted: #9bb5ba;
+
+  /* Colors - Light Mode (ocean-tinted, WCAG AA+) */
+  --color-light-bg-primary: #f4f9fa;
+  --color-light-bg-secondary: #e8f1f3;
+  --color-light-bg-tertiary: #d5e4e8;
+  --color-light-text-primary: #0b2a3c;
+  --color-light-text-secondary: #1a4558;
+  --color-light-text-tertiary: #2f5f72;
+  --color-light-text-muted: #3d6373;
+  --color-light-border: #b7d0d6;
+  --color-light-border-strong: #7fa3ae;
+  --color-coral-light-optimized: #c2410c;
+  --color-teal-light-optimized: #0f766e;
 
   /* Typography */
-  --font-logo: 'Outfit', sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Lato', sans-serif;
-  --font-data: 'Roboto Mono', monospace;
+  --font-logo: "Outfit", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
+  --font-data: "Roboto Mono", monospace;
 
-  /* Font Sizes */
+  /* Role scale */
+  --size-display: clamp(2.25rem, 5.5vw, 3.5rem);
   --size-h1: clamp(2rem, 5vw, 3rem);
   --size-h2: clamp(1.5rem, 4vw, 2rem);
   --size-h3: clamp(1.25rem, 3vw, 1.5rem);
   --size-body: 1rem;
   --size-small: 0.875rem;
+  --size-meta: 0.75rem;
+  --leading-display: 1.12;
+  --leading-heading: 1.2;
+  --leading-body: 1.65;
+  --tracking-display: -0.02em;
+  --tracking-heading: -0.015em;
+  --tracking-label: 0.06em;
+  --measure-prose: 65ch;
 
   /* Spacing */
   --space-xs: 0.5rem;
@@ -63,10 +80,10 @@
   --transition-snap: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-hover: transform 0.3s ease-out;
 
-  /* Shadows */
+  /* Shadows — glow carries a slight Y offset (craft: not zero-offset halos) */
   --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow-coral: 0 0 20px rgba(255, 106, 61, 0.3);
-  --shadow-glow-teal: 0 0 20px rgba(14, 138, 154, 0.3);
+  --shadow-glow-coral: 0 8px 24px rgba(255, 106, 61, 0.32);
+  --shadow-glow-teal: 0 8px 24px rgba(14, 138, 154, 0.32);
 
   /* Z-Index Scale */
   --z-dropdown: 100;
@@ -85,21 +102,198 @@ html {
 
 body {
   font-family: var(--font-body);
-  line-height: 1.6;
+  font-size: var(--size-body);
+  line-height: var(--leading-body);
+  letter-spacing: 0.01em;
+  min-height: 100%;
+  background: var(--color-abyss-navy);
+  color: var(--color-foam);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-underline-offset: 0.18em;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--color-tide-teal) 55%, transparent)
+    transparent;
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
+#root {
+  min-height: 100%;
+}
+
+.dark body {
+  background: var(--color-abyss-navy);
+  color: var(--color-foam);
+}
+
+.light body {
+  background: var(--color-light-bg-primary);
+  color: var(--color-light-text-primary);
+}
+
+/* Chromium scrollbars — brand chrome */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: color-mix(
+    in srgb,
+    var(--color-tide-teal) 45%,
+    var(--color-abyss-light)
+  );
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(
+    in srgb,
+    var(--color-tide-teal) 70%,
+    var(--color-abyss-light)
+  );
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.light {
+  scrollbar-color: color-mix(
+      in srgb,
+      var(--color-teal-light-optimized) 40%,
+      transparent
+    )
+    transparent;
+}
+
+.light *::-webkit-scrollbar-thumb {
+  background: color-mix(
+    in srgb,
+    var(--color-teal-light-optimized) 35%,
+    var(--color-light-bg-tertiary)
+  );
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-tide-teal) 45%, transparent);
+  color: var(--color-foam);
+}
+
+.light ::selection {
+  background: color-mix(
+    in srgb,
+    var(--color-teal-light-optimized) 28%,
+    transparent
+  );
+  color: var(--color-light-text-primary);
+}
+
+/* Caret inherits brand action energy on form fields */
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: var(--color-coral-spark);
+}
+
+.light input,
+.light textarea,
+.light [contenteditable="true"] {
+  caret-color: var(--color-coral-light-optimized);
+}
+
+/* Typography — element defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
 }
 
-h1 { font-size: var(--size-h1); }
-h2 { font-size: var(--size-h2); }
-h3 { font-size: var(--size-h3); }
+h1 {
+  font-size: var(--size-h1);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+h2 {
+  font-size: var(--size-h2);
+}
+h3 {
+  font-size: var(--size-h3);
+}
+
+/* Role utilities — purpose over arbitrary Tailwind sizes */
+.type-display {
+  font-family: var(--font-heading);
+  font-size: var(--size-display);
+  font-weight: 800;
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  text-wrap: balance;
+}
+
+.type-headline {
+  font-family: var(--font-heading);
+  font-size: var(--size-h2);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+}
+
+.type-title {
+  font-family: var(--font-heading);
+  font-size: var(--size-h3);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+}
+
+.type-body {
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+}
+
+.type-label {
+  font-family: var(--font-heading);
+  font-size: var(--size-small);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.type-meta {
+  font-family: var(--font-body);
+  font-size: var(--size-meta);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+.type-data {
+  font-family: var(--font-data);
+  font-size: var(--size-small);
+  font-weight: 500;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+.type-prose {
+  max-width: var(--measure-prose);
+}
 
 /* Focus States (Accessibility) */
 :focus-visible {
@@ -107,20 +301,55 @@ h3 { font-size: var(--size-h3); }
   outline-offset: 2px;
 }
 
+.light :focus-visible {
+  outline-color: var(--color-coral-light-optimized);
+}
+
 /* Skip Link (Accessibility) */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: env(safe-area-inset-top, 0px);
   left: 0;
+  transform: translateY(-125%);
   background: var(--color-coral-spark);
-  color: var(--color-foam);
+  color: var(--color-abyss-navy);
   padding: var(--space-sm) var(--space-md);
   z-index: var(--z-tooltip);
   font-weight: 600;
+  transition: transform 160ms ease-out;
 }
 
 .skip-link:focus {
-  top: 0;
+  transform: translateY(0);
+}
+
+/* Installed-PWA and notched-device chrome */
+.header-safe-default {
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding-bottom: 1rem;
+}
+
+.header-safe-scrolled {
+  padding-top: calc(0.75rem + env(safe-area-inset-top, 0px));
+  padding-bottom: 0.75rem;
+}
+
+.mobile-menu-safe-top {
+  padding: calc(1rem + env(safe-area-inset-top, 0px)) 1rem 1rem;
+}
+
+.mobile-menu-safe-content {
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+}
+
+.main-safe-top {
+  padding-top: calc(6rem + env(safe-area-inset-top, 0px));
+}
+
+@media (min-width: 768px) {
+  .main-safe-top {
+    padding-top: calc(7rem + env(safe-area-inset-top, 0px));
+  }
 }
 
 /* ========================================
@@ -160,23 +389,23 @@ h3 { font-size: var(--size-h3); }
   border-radius: var(--radius-lg);
 }
 
-/* Light mode glass variants */
+/* Light mode glass variants — ocean-tinted borders, not generic gray */
 .light .glass {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(209, 213, 219, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  background: rgba(244, 249, 250, 0.88);
+  border-color: rgba(183, 208, 214, 0.7);
+  box-shadow: 0 8px 32px rgba(11, 42, 60, 0.08);
 }
 
 .light .glass-subtle {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(209, 213, 219, 0.4);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  background: rgba(244, 249, 250, 0.72);
+  border-color: rgba(183, 208, 214, 0.5);
+  box-shadow: 0 4px 16px rgba(11, 42, 60, 0.06);
 }
 
 .light .glass-strong {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(209, 213, 219, 0.8);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  background: rgba(244, 249, 250, 0.95);
+  border-color: rgba(183, 208, 214, 0.85);
+  box-shadow: 0 12px 40px rgba(11, 42, 60, 0.1);
 }
 
 .light .glass-accent {
@@ -190,8 +419,12 @@ h3 { font-size: var(--size-h3); }
    ======================================== */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -230,7 +463,8 @@ h3 { font-size: var(--size-h3); }
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
   }
   33% {
@@ -247,15 +481,6 @@ h3 { font-size: var(--size-h3); }
   }
   100% {
     transform: scale(1.1);
-  }
-}
-
-@keyframes bounceSlow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 
@@ -314,12 +539,49 @@ h3 { font-size: var(--size-h3); }
   animation: slowZoom 20s ease-in-out infinite alternate;
 }
 
-.animate-bounce-slow {
-  animation: bounceSlow 2s ease-in-out infinite;
+.animate-scroll-cue {
+  animation: scrollCue 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .animate-scroll-indicator {
-  animation: scrollIndicator 1.5s ease-in-out infinite;
+  animation: scrollIndicator 1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@keyframes scrollCue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+.blur-glass-mobile {
+  filter: blur(64px);
+}
+
+@media (min-width: 768px) {
+  .blur-glass-mobile {
+    filter: blur(120px);
+  }
+}
+
+.animate-success-pulse {
+  animation: successPulse 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes successPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in-up {
@@ -376,14 +638,41 @@ h3 { font-size: var(--size-h3); }
   animation-delay: 600ms;
 }
 
-/* Reduced Motion */
+/* Reduced Motion — intentional alternatives, not a global kill switch */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in,
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
+  .animate-liquid-reveal,
+  .animate-float,
+  .animate-float-delayed,
+  .animate-slow-zoom,
+  .animate-scroll-cue,
+  .animate-scroll-indicator,
+  .animate-success-pulse,
+  .animate-slide-down,
+  .animate-slide-up-delayed,
+  .animate-fade-in-delayed,
+  .animate-fade-in-delayed-2 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Soften expensive glass blur on small screens */
+@media (max-width: 767px) {
+  .glass,
+  .glass-subtle,
+  .glass-strong,
+  .glass-accent {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 }
 
@@ -470,9 +759,13 @@ h3 { font-size: var(--size-h3); }
 
 /* Card Shadows - Light Mode */
 .light .shadow-card-light {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 3px rgba(11, 42, 60, 0.1),
+    0 1px 2px rgba(11, 42, 60, 0.06);
 }
 
 .light .shadow-card-light-hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 12px rgba(11, 42, 60, 0.1),
+    0 2px 4px rgba(11, 42, 60, 0.06);
 }
