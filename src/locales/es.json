@@ -31,7 +31,7 @@
       "guidance_cta": "Pedir orientación al coach",
       "coach_line": "Entrenador principal · biomecánica e Ironman",
       "schedules_cta": "Ir a planes y horarios",
-      "session_times": "Mar y jue 7:00 p. m. · Sáb 8:30 a. m. y 9:30 a. m."
+      "session_times": "Lun, mié y vie desde 4:00 p. m. · Jue 7:00 p. m. · Sáb 8:30 a. m."
     },
     "method": {
       "title": "Así convertimos tu contexto en un plan",
@@ -58,7 +58,7 @@
       "subtitle": "Te respondemos por WhatsApp o por el formulario — tú eliges.",
       "description": "Cuéntanos tu nivel y meta. Confirmamos disponibilidad y el siguiente paso para tu primera sesión.",
       "response_time": "WhatsApp: respuesta habitual el mismo día",
-      "support_hours": "Sesiones: martes y jueves 7:00 p. m. · sábados 8:30 a. m. y 9:30 a. m.",
+      "support_hours": "Sesiones: lun, mié, vie desde 4:00 p. m. · jue 7:00 p. m. · sáb 8:30 a. m.",
       "whatsapp": "Escribir por WhatsApp",
       "form": "Pedir orientación por formulario"
     }
@@ -104,8 +104,12 @@
     "select_plan": "Solicitar este plan",
     "monthly_fee": "Tarifa mensual",
     "most_popular": "Más popular",
-    "schedule_title": "Horarios semanales",
-    "schedule_subtitle": "Llega 15 minutos antes para empezar a tiempo.",
+    "schedule_tagline": "Natación · Horario semanal",
+    "schedule_title": "Horarios de clases",
+    "schedule_subtitle": "Encuentra tu hora. Entrena con constancia.",
+    "schedule_arrive_early": "Llega 10 minutos antes",
+    "schedule_save": "Guarda este horario",
+    "schedule_saved": "¡Horario copiado!",
     "location_title": "Piscina APAMAR",
     "location_address": "Dirección:",
     "location_address_full": "400 m Oeste del Parque, 21101 Zarcero, Costa Rica",
@@ -125,9 +129,13 @@
     "info_advanced": "Avanzado",
     "info_rules": "Todos los participantes deben seguir las reglas y regulaciones de la piscina establecidas por la instalación.",
     "days": {
+      "monday": "Lunes",
       "tuesday": "Martes",
+      "wednesday": "Miércoles",
       "thursday": "Jueves",
-      "saturday": "Sábado"
+      "friday": "Viernes",
+      "saturday": "Sábado",
+      "no_classes": "Sin clases"
     },
     "dolphin": {
       "name": "DELFÍN",
@@ -164,7 +172,7 @@
       "subtitle": "¿Preguntas de nivel, horario o qué plan te encaja?",
       "description": "Envía el formulario con tu meta: confirmamos disponibilidad y el siguiente paso para tu primera sesión.",
       "button": "Abrir formulario de contacto",
-      "support_hours": "Sesiones: martes y jueves 7:00 p. m. · sábados 8:30 a. m. y 9:30 a. m. · Piscina APAMAR, Zarcero",
+      "support_hours": "Sesiones: lun, mié, vie desde 4:00 p. m. · jue 7:00 p. m. · sáb 8:30 a. m. · Piscina APAMAR, Zarcero",
       "response_time": "WhatsApp: respuesta habitual el mismo día · Formulario: 24–48 horas"
     }
   },

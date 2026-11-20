@@ -31,7 +31,7 @@
       "guidance_cta": "Get coach guidance",
       "coach_line": "Head coach · biomechanics & Ironman",
       "schedules_cta": "Go to plans & schedules",
-      "session_times": "Tue & Thu 7:00 p.m. · Sat 8:30 a.m. & 9:30 a.m."
+      "session_times": "Mon, Wed & Fri from 4:00 p.m. · Thu 7:00 p.m. · Sat 8:30 a.m."
     },
     "method": {
       "title": "How we turn your context into a plan",
@@ -58,7 +58,7 @@
       "subtitle": "Reach us on WhatsApp or the form — your choice.",
       "description": "Tell us your level and goal. We confirm availability and the next step for your first session.",
       "response_time": "WhatsApp: usually same-day replies",
-      "support_hours": "Sessions: Tuesday & Thursday 7:00 p.m. · Saturday 8:30 a.m. & 9:30 a.m.",
+      "support_hours": "Sessions: Mon, Wed, Fri from 4:00 p.m. · Thu 7:00 p.m. · Sat 8:30 a.m.",
       "whatsapp": "Message on WhatsApp",
       "form": "Get guidance by form"
     }
@@ -104,8 +104,12 @@
     "select_plan": "Request this plan",
     "monthly_fee": "Monthly fee",
     "most_popular": "Most popular",
-    "schedule_title": "Weekly session times",
-    "schedule_subtitle": "Arrive 15 minutes early so we can start on time.",
+    "schedule_tagline": "Swimming · Weekly schedule",
+    "schedule_title": "Class schedules",
+    "schedule_subtitle": "Find your time. Train with consistency.",
+    "schedule_arrive_early": "Arrive 10 minutes early",
+    "schedule_save": "Save this schedule",
+    "schedule_saved": "Schedule copied!",
     "location_title": "APAMAR pool",
     "location_address": "Address:",
     "location_address_full": "400 m West of the Park, 21101 Zarcero, Costa Rica",
@@ -125,9 +129,13 @@
     "info_advanced": "Advanced",
     "info_rules": "All participants must follow the pool rules and regulations established by the facility.",
     "days": {
+      "monday": "Monday",
       "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
       "thursday": "Thursday",
-      "saturday": "Saturday"
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "no_classes": "No classes"
     },
     "dolphin": {
       "name": "DOLPHIN",
@@ -164,7 +172,7 @@
       "subtitle": "Questions about level, schedule, or which plan fits?",
       "description": "Send the form with your goal — we confirm availability and the next step for your first session.",
       "button": "Open contact form",
-      "support_hours": "Sessions: Tuesday & Thursday 7:00 p.m. · Saturday 8:30 a.m. & 9:30 a.m. · APAMAR Pool, Zarcero",
+      "support_hours": "Sessions: Mon, Wed, Fri from 4:00 p.m. · Thu 7:00 p.m. · Sat 8:30 a.m. · APAMAR Pool, Zarcero",
       "response_time": "WhatsApp: usually same-day · Form: 24–48 hours"
     }
   },

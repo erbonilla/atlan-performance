@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@hooks/useLanguage";
 import { motion } from "framer-motion";
 import Card from "@components/ui/Card";
@@ -98,12 +98,64 @@ const Courses = () => {
     navigate("/contact", { state: { selectedPlan: courseId } });
   };
 
-  const schedules = [
-    { day: t("courses.days.tuesday", "Tuesday"), time: "7:00pm" },
-    { day: t("courses.days.thursday", "Thursday"), time: "7:00pm" },
-    { day: t("courses.days.saturday", "Saturday"), time: "8:30am" },
-    { day: t("courses.days.saturday", "Saturday"), time: "9:30am" },
+  const [copiedSchedule, setCopiedSchedule] = useState(false);
+
+  const weeklySchedule = [
+    {
+      id: "monday",
+      day: t("courses.days.monday", "LUNES"),
+      color: "teal",
+      slots: ["4:00 p.m.", "5:00 p.m.", "6:00 p.m."],
+    },
+    {
+      id: "tuesday",
+      day: t("courses.days.tuesday", "MARTES"),
+      color: "muted",
+      slots: [],
+      noClasses: t("courses.days.no_classes", "Sin clases"),
+    },
+    {
+      id: "wednesday",
+      day: t("courses.days.wednesday", "MIÉRCOLES"),
+      color: "teal",
+      slots: ["4:00 p.m.", "5:00 p.m.", "6:00 p.m."],
+    },
+    {
+      id: "thursday",
+      day: t("courses.days.thursday", "JUEVES"),
+      color: "coral",
+      slots: ["7:00 p.m."],
+    },
+    {
+      id: "friday",
+      day: t("courses.days.friday", "VIERNES"),
+      color: "coral",
+      slots: ["4:00 p.m.", "5:00 p.m."],
+    },
+    {
+      id: "saturday",
+      day: t("courses.days.saturday", "SÁBADO"),
+      color: "coral",
+      slots: ["8:30 a.m."],
+    },
   ];
+
+  const handleSaveSchedule = () => {
+    const text =
+      `🏊 ${t("courses.schedule_title", "Horarios de clases")} - Atlan Performance\n` +
+      `• ${t("courses.days.monday", "Lunes")}: 4:00 p.m., 5:00 p.m., 6:00 p.m.\n` +
+      `• ${t("courses.days.tuesday", "Martes")}: ${t("courses.days.no_classes", "Sin clases")}\n` +
+      `• ${t("courses.days.wednesday", "Miércoles")}: 4:00 p.m., 5:00 p.m., 6:00 p.m.\n` +
+      `• ${t("courses.days.thursday", "Jueves")}: 7:00 p.m.\n` +
+      `• ${t("courses.days.friday", "Viernes")}: 4:00 p.m., 5:00 p.m.\n` +
+      `• ${t("courses.days.saturday", "Sábado")}: 8:30 a.m.\n` +
+      `⏰ ${t("courses.schedule_arrive_early", "Llega 10 minutos antes")}`;
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+      setCopiedSchedule(true);
+      setTimeout(() => setCopiedSchedule(false), 2500);
+    }
+  };
 
   return (
     <div className="container-atlan py-12 md:py-20">
@@ -188,45 +240,103 @@ const Courses = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          <Card className="h-full p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-2">
-              <CalendarBlank
-                size={28}
-                className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized"
-                weight="regular"
-              />
-              <h2 className="text-xl text-white dark:text-white light:text-light-text-primary font-heading font-bold tracking-wide">
-                {t("courses.schedule_title")}
-              </h2>
-            </div>
-            <p className="text-foam-muted dark:text-foam-muted light:text-light-text-tertiary text-sm mb-6">
-              {t("courses.schedule_subtitle")}
-            </p>
-
-            <div className="space-y-3">
-              {schedules.map((slot, index) => (
-                <motion.div
-                  key={index}
-                  className="flex justify-between items-center p-4 rounded-lg bg-white/5 hover:bg-white/10 dark:bg-white/5 dark:hover:bg-white/10 light:bg-light-bg-tertiary light:hover:bg-light-bg-secondary transition-all border border-white/10 dark:border-white/10 light:border-light-border"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.1 + index * 0.05, duration: 0.4 }}
-                  whileHover={{ x: 4 }}
-                >
-                  <div className="flex items-center gap-3">
-                    <Clock
-                      size={20}
-                      className="text-white dark:text-white light:text-light-text-primary"
-                    />
-                    <span className="font-bold text-white dark:text-white light:text-light-text-primary">
-                      {slot.day}
-                    </span>
-                  </div>
-                  <span className="text-white dark:text-white light:text-light-text-primary font-bold">
-                    {slot.time}
+          <Card className="h-full p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <CalendarBlank
+                  size={28}
+                  className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized"
+                  weight="regular"
+                />
+                <div>
+                  <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-coral-spark dark:text-coral-spark light:text-coral-light-optimized block">
+                    {t("courses.schedule_tagline", "Natación · Horario semanal")}
                   </span>
-                </motion.div>
-              ))}
+                  <h2 className="text-xl md:text-2xl text-white dark:text-white light:text-light-text-primary font-heading font-bold tracking-wide">
+                    {t("courses.schedule_title", "Horarios de clases")}
+                  </h2>
+                </div>
+              </div>
+              <p className="text-foam-muted dark:text-foam-muted light:text-light-text-tertiary text-sm mb-5">
+                {t("courses.schedule_subtitle", "Encuentra tu hora. Entrena con constancia.")}
+              </p>
+
+              {/* Weekly Grid (3 columns, 2 rows like the image) */}
+              <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
+                {weeklySchedule.map((col, index) => {
+                  const isMuted = col.color === "muted";
+                  const isTeal = col.color === "teal";
+                  const isCoral = col.color === "coral";
+
+                  return (
+                    <motion.div
+                      key={col.id}
+                      initial={{ opacity: 0, y: 15 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.1 + index * 0.05, duration: 0.4 }}
+                      className={`flex flex-col rounded-xl p-2.5 sm:p-3 border transition-colors ${
+                        isMuted
+                          ? "bg-white/[0.03] dark:bg-white/[0.03] light:bg-light-bg-secondary/60 border-white/5 dark:border-white/5 light:border-light-border/60"
+                          : "bg-white/5 dark:bg-white/5 light:bg-light-bg-tertiary border-white/10 dark:border-white/10 light:border-light-border hover:border-white/20"
+                      }`}
+                    >
+                      <span
+                        className={`text-[11px] sm:text-xs font-heading font-bold uppercase tracking-wider text-center mb-2.5 ${
+                          isTeal
+                            ? "text-teal-bright dark:text-teal-bright light:text-teal-light-optimized"
+                            : isCoral
+                            ? "text-coral-spark dark:text-coral-spark light:text-coral-light-optimized"
+                            : "text-foam-muted dark:text-foam-muted light:text-light-text-tertiary"
+                        }`}
+                      >
+                        {col.day}
+                      </span>
+
+                      {col.slots.length > 0 ? (
+                        <div className="space-y-1.5 flex-grow flex flex-col justify-center">
+                          {col.slots.map((time, idx) => (
+                            <div
+                              key={idx}
+                              className="px-1.5 py-1 text-center font-mono text-[11px] sm:text-xs font-semibold rounded-md bg-abyss-navy/70 dark:bg-abyss-navy/70 light:bg-white text-white dark:text-white light:text-light-text-primary border border-white/10 dark:border-white/10 light:border-light-border shadow-sm tracking-tight"
+                            >
+                              {time}
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="flex-grow flex items-center justify-center py-4">
+                          <span className="italic text-xs text-foam-muted dark:text-foam-muted light:text-light-text-tertiary text-center">
+                            {col.noClasses}
+                          </span>
+                        </div>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Schedule Footer */}
+            <div className="pt-4 border-t border-white/10 dark:border-white/10 light:border-light-border flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-wider text-white dark:text-white light:text-light-text-primary">
+                <Clock
+                  size={18}
+                  className="text-coral-spark dark:text-coral-spark light:text-coral-light-optimized shrink-0"
+                  weight="bold"
+                />
+                <span>
+                  {t("courses.schedule_arrive_early", "Llega 10 minutos antes")}
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={handleSaveSchedule}
+                className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-coral-spark text-abyss-navy hover:bg-coral-spark/90 font-heading font-bold text-xs uppercase tracking-wider shadow-sm transition-all hover:scale-105 active:scale-95 cursor-pointer"
+              >
+                {copiedSchedule
+                  ? t("courses.schedule_saved", "¡Horario copiado!")
+                  : t("courses.schedule_save", "Guarda este horario")}
+              </button>
             </div>
           </Card>
         </motion.div>
